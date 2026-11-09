@@ -1,0 +1,134 @@
+
+---
+import "../styles/global.css";
+import Navbar from "../components/layout/Navbar.jsx";
+import Footer from "../components/layout/Footer.astro";
+import FloatingWhatsApp from "../components/layout/FloatingWhatsApp.astro";
+import { siteConfig } from "../data/siteConfig.js";
+
+const {
+  title = "Elefriendride | Elephant Experiences in Jaipur",
+  description = "Explore Elefriendride's elephant experiences in Jaipur, Rajasthan.",
+  socialImage = "/images/seo/elefriendride-jaipur-social.jpg",
+  socialImageAlt = "Elefriendride elephant experiences in Jaipur, Rajasthan",
+  type = "website",
+  preloadImage,
+  structuredData,
+} = Astro.props;
+
+if (!Astro.site) {
+  throw new Error("Set SITE_URL to the canonical production origin before building.");
+}
+
+const canonicalPath = `${Astro.url.pathname.replace(/\/+$/, "")}/`;
+const canonicalUrl = new URL(canonicalPath, Astro.site).href;
+const socialImageUrl = new URL(socialImage, Astro.site).href;
+const pageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: title,
+  description,
+  inLanguage: "en-IN",
+  isPartOf: { "@id": `${Astro.site}#website` },
+};
+const businessStructuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${Astro.site}#business`,
+      name: siteConfig.name,
+      description:
+        "Elefriendride lists elephant encounters, rides, feeding, walking and other visitor experiences in Jaipur, Rajasthan.",
+      url: Astro.site,
+      image: socialImageUrl,
+      logo: new URL("/elefriendride-logo.svg", Astro.site).href,
+      telephone: [siteConfig.phone, siteConfig.additionalPhone],
+      email: siteConfig.email,
+      address: {
+        "@type": "PostalAddress",
+        ...siteConfig.structuredAddress,
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Jaipur",
+      },
+      sameAs: [siteConfig.instagram, siteConfig.youtube],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${Astro.site}#website`,
+      url: Astro.site,
+      name: siteConfig.name,
+      inLanguage: "en-IN",
+      publisher: { "@id": `${Astro.site}#business` },
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#244537" />
+
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/elefriendride-logo.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
+    <script type="application/ld+json" set:html={JSON.stringify(businessStructuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(pageStructuredData)} />
+    {structuredData && (
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    )}
+
+    <!-- Google Fonts -->
+    {preloadImage && (
+      <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+    )}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <Navbar client:load currentPath={Astro.url.pathname.replace(/\/$/, "") || "/"} />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+    <FloatingWhatsApp />
+  </body>
+</html>

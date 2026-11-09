@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+import Gallery from "../components/home/Gallery.jsx";
+---
+
+<BaseLayout
+  title="Elefriendride Photo Gallery | Jaipur Experiences"
+  description="Browse photos from Elefriendride in Jaipur, Rajasthan, featuring elephant encounters, visitor moments and the experiences listed on the website."
+>
+  <PageIntro
+    eyebrow="CAPTURED MOMENTS"
+    title="Memories That Last Forever"
+    description="Browse photographs by experience, open any image in the lightbox and move through the collection."
+    image="/images/gallery/gallery-01.webp"
+  />
+
+  <div class="gallery-page">
+    <Gallery client:load />
+  </div>
+</BaseLayout>
+
+<style>
+  .gallery-page {
+    padding: 70px 7% 100px;
+    background: #f8f4eb;
+  }
+
+  @media (max-width: 600px) {
+    .gallery-page {
+      padding: 55px 5% 75px;
+    }
+  }
+</style>

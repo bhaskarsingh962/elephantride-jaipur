@@ -1,0 +1,124 @@
+
+---
+import { getImageDimensions } from "../../data/imageDimensions.js";
+
+const imageSrc = "/images/sanctuary/sanctuary-elephants.webp";
+const imageDimensions = getImageDimensions(imageSrc);
+---
+
+<section class="sanctuary-section">
+  <div class="sanctuary-image">
+    <img
+      src={imageSrc}
+      alt="Elephants at Elefriendride in Jaipur"
+      width={imageDimensions.width}
+      height={imageDimensions.height}
+      loading="lazy"
+    />
+    <div class="sanctuary-overlay"></div>
+  </div>
+
+  <div class="sanctuary-content">
+    <span>DISCOVER OUR SANCTUARY</span>
+
+    <h2>
+      A Place to Connect
+      <br />
+      with <em>Gentle Giants</em>
+    </h2>
+
+    <p>
+      Explore the sanctuary, discover the elephants
+      and learn more about the experiences offered
+      at Elefriendride.
+    </p>
+
+    <a href="/sanctuary">
+      Explore Our Sanctuary <span>↗</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .sanctuary-section {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #244537;
+    color: #f8f4eb;
+  }
+
+  .sanctuary-image,
+  .sanctuary-overlay {
+    position: absolute;
+    inset: 0;
+  }
+
+  .sanctuary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sanctuary-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(20, 39, 31, 0.92),
+      rgba(20, 39, 31, 0.65) 55%,
+      rgba(20, 39, 31, 0.1)
+    );
+  }
+
+  .sanctuary-content {
+    position: relative;
+    max-width: 750px;
+    padding: 100px 9%;
+  }
+
+  .sanctuary-content > span {
+    color: #d7b77e;
+    letter-spacing: 3px;
+    font-size: 11px;
+  }
+
+  .sanctuary-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(48px, 6vw, 78px);
+    line-height: 1.05;
+    font-weight: 400;
+    margin: 28px 0;
+  }
+
+  .sanctuary-content h2 em {
+    color: #d7b77e;
+  }
+
+  .sanctuary-content p {
+    max-width: 500px;
+    line-height: 1.9;
+    color: #e5e1d8;
+  }
+
+  .sanctuary-content a {
+    display: inline-flex;
+    gap: 25px;
+    margin-top: 30px;
+    padding: 16px 22px;
+    background: #d7b77e;
+    color: #292923;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .sanctuary-section {
+      min-height: 570px;
+    }
+
+    .sanctuary-content {
+      padding: 70px 7%;
+    }
+  }
+</style>

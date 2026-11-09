@@ -1,16 +1,32 @@
+
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import AboutSection from "../components/home/AboutSection.astro";
+import SanctuarySection from "../components/home/SanctuarySection.astro";
+import ActivitiesSection from "../components/home/ActivitiesSection.astro";
+import GallerySection from "../components/home/GallerySection.astro";
+import BlogPreview from "../components/home/BlogPreview.astro";
+import ContactSection from "../components/home/ContactSection.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Elephant Experiences in Jaipur | Elefriendride"
+  description="Discover elephant experiences in Jaipur, Rajasthan with Elefriendride. Explore the sanctuary, activities and visitor information to plan your visit."
+  preloadImage="/images/hero/elephant-jaipur.webp"
+>
+  <Hero />
+
+  <AboutSection />
+
+  <SanctuarySection />
+
+  <ActivitiesSection />
+
+  <GallerySection />
+
+  <BlogPreview />
+
+  <ContactSection headingLevel="h2" />
+
+</BaseLayout>

@@ -1,0 +1,174 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/layout/PageIntro.astro";
+import { activities } from "../../data/activities.js";
+---
+
+<BaseLayout
+  title="Elephant Activities in Jaipur | Elefriendride"
+  description="Explore elephant activities in Jaipur, including elephant meetings, rides, feeding and walking experiences listed by Elefriendride."
+>
+  <PageIntro
+    eyebrow="DISCOVER OUR EXPERIENCES"
+    title="Moments That Stay Forever"
+    description="Explore the elephant experiences featured by Elefriendride and contact the team to check current availability."
+    image="/images/activities/elephant-meeting.webp"
+  />
+
+  <div class="experiences-page">
+    <section class="experience-grid">
+      {activities.map((activity) => (
+        <article class="experience-card">
+          <a href={`/experiences/${activity.slug}`} class="experience-image">
+            <img
+              src={activity.image}
+              alt={`${activity.title} at Elefriendride, Jaipur`}
+              width={activity.imageDimensions.width}
+              height={activity.imageDimensions.height}
+              loading="lazy"
+              decoding="async"
+            />
+            <span>{activity.number}</span>
+            <span class="experience-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="experience-copy">
+            <h2><a href={`/experiences/${activity.slug}`}>{activity.title}</a></h2>
+            <p>{activity.description}</p>
+            <a class="experience-link" href={`/experiences/${activity.slug}`}>
+              Discover More <span>→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </section>
+    <p class="experience-note">
+      Prices, schedules and availability are not listed here. Please contact
+      Elefriendride directly to confirm current details.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .experiences-page {
+    padding: 90px 7% 100px;
+    background: #eee8dc;
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 42px 26px;
+    max-width: 1350px;
+    margin: auto;
+  }
+
+  .experience-card {
+    min-width: 0;
+  }
+
+  .experience-image {
+    position: relative;
+    display: block;
+    height: 370px;
+    overflow: hidden;
+    background: #dcc5a1;
+  }
+
+  .experience-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .experience-card:hover .experience-image img {
+    transform: scale(1.05);
+  }
+
+  .experience-image > span:first-of-type,
+  .experience-arrow {
+    position: absolute;
+    display: grid;
+    place-items: center;
+  }
+
+  .experience-image > span:first-of-type {
+    top: 15px;
+    left: 15px;
+    padding: 10px 13px;
+    background: #f8f4eb;
+    color: #244537;
+    font-size: 11px;
+  }
+
+  .experience-arrow {
+    right: 15px;
+    bottom: 15px;
+    width: 42px;
+    height: 42px;
+    background: #d7b77e;
+    color: #292923;
+  }
+
+  .experience-copy {
+    padding: 20px 2px;
+  }
+
+  .experience-copy h2 {
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 29px;
+    font-weight: 500;
+  }
+
+  .experience-copy h2 a {
+    color: #244537;
+    text-decoration: none;
+  }
+
+  .experience-copy p {
+    min-height: 50px;
+    color: #706d65;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .experience-link {
+    display: inline-flex;
+    gap: 14px;
+    margin-top: 8px;
+    color: #a64f37;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .experience-note {
+    max-width: 1350px;
+    margin: 45px auto 0;
+    color: #706d65;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 950px) {
+    .experience-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .experiences-page {
+      padding: 70px 6%;
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .experience-image {
+      height: 380px;
+    }
+  }
+</style>

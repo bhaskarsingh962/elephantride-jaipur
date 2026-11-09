@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+
+const tours = [
+  "Jaipur Sightseeing Tour",
+  "Night Tour of Jaipur",
+  "Jaipur Shopping Tour",
+  "Jaipur Food Tour",
+  "Walking Tour of Jaipur",
+  "Jaipur Village Jeep Safari",
+  "Elephant Safari in Jaipur",
+  "Jaipur Hidden Places",
+];
+---
+
+<BaseLayout
+  title="Jaipur Same Day Tours | Elefriendride"
+  description="Explore Jaipur sightseeing, food, shopping and other same day tour options listed by Elefriendride. Contact the team to ask about current availability."
+>
+  <PageIntro
+    eyebrow="EXPLORE JAIPUR"
+    title="Same Day Tours"
+    description="Discover Jaipur tour options and contact our team to ask about current availability and planning."
+  />
+
+  <section class="tours-page" aria-label="Same day tour options">
+    <div class="tours-grid">
+      {tours.map((tour, index) => (
+        <article class="tour-card">
+          <span class="tour-number">{String(index + 1).padStart(2, "0")}</span>
+          <h2>{tour}</h2>
+          <a href="/contact">Ask about this tour <span aria-hidden="true">→</span></a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .tours-page {
+    padding: 85px 7% 100px;
+    background: #eee8dc;
+  }
+
+  .tours-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .tour-card {
+    min-width: 0;
+    padding: 30px;
+    background: #f8f4eb;
+  }
+
+  .tour-number {
+    color: #a64f37;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .tour-card h2 {
+    margin: 18px 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 3vw, 34px);
+    font-weight: 500;
+  }
+
+  .tour-card a {
+    display: inline-flex;
+    gap: 12px;
+    color: #a64f37;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .tour-card a:focus-visible {
+    outline: 2px solid #a64f37;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 620px) {
+    .tours-page {
+      padding: 65px 6%;
+    }
+
+    .tours-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .tour-card {
+      padding: 24px;
+    }
+  }
+</style>

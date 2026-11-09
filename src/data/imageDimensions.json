@@ -1,0 +1,658 @@
+{
+  "/elefriendride-logo.svg": {
+    "width": 120,
+    "height": 120
+  },
+  "/favicon.svg": {
+    "width": 128,
+    "height": 128
+  },
+  "/images/about/about-elephant.jpg": {
+    "width": 4284,
+    "height": 5712
+  },
+  "/images/about/about-elephant.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/activities/elephant-bathing.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/activities/elephant-bathing.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/activities/elephant-feeding.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/activities/elephant-feeding.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/activities/elephant-meeting.jpg": {
+    "width": 3024,
+    "height": 4032
+  },
+  "/images/activities/elephant-meeting.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/activities/elephant-painting.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/activities/elephant-painting.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/activities/elephant-ride.jpeg": {
+    "width": 2160,
+    "height": 3840
+  },
+  "/images/activities/elephant-ride.webp": {
+    "width": 1013,
+    "height": 1800
+  },
+  "/images/activities/elephant-walking.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/activities/elephant-walking.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/blog/blog-elephants.PNG": {
+    "width": 1179,
+    "height": 1569
+  },
+  "/images/blog/blog-elephants.webp": {
+    "width": 1179,
+    "height": 1569
+  },
+  "/images/blog/blog-jaipur.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/blog/blog-jaipur.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/blog/blog-visit.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/blog/blog-visit.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/blog/source/a-memorable-adventure-for-usa-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/a-unique-adventure-for-uk-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/a-unique-experience-for-uk-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/best-time-to-visit-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/book-elephant-safari-in-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/christmas-in-india-golden-triangle-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/create-lasting-memories-with-indias-incredible-elephant-adventures.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/delhi-to-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elefriendride-is-a-must-visit-for-usa-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-activities-in-jaipur-with-elefriendride.webp": {
+    "width": 1900,
+    "height": 720
+  },
+  "/images/blog/source/elephant-adventures-in-jaipur.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-bathing-in-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-experiences-in-jaipur.webp": {
+    "width": 1900,
+    "height": 720
+  },
+  "/images/blog/source/elephant-farm-in-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-feeding-experience-in-jaipur-for-usa-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-feeding-in-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-painting-in-jaipur-for-uk-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-ride-at-amber-fort-with-elefriendride.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-ride-in-jaipur-india.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-ride-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-ride-or-jeep-amber-fort-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elephant-ride-with-kids-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elephant-rides-and-tours-await.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-rides-in-jaipur.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-riding-tours.webp": {
+    "width": 1900,
+    "height": 720
+  },
+  "/images/blog/source/elephant-safari-vs-elephant-ride-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elephant-sanctuary-day-trip-from-delhi-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elephant-sanctuary-india.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-sanctuary-jaipur-experience-ethical-elephant-tourism.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-sanctuary-tours-in-jaipur-for-usa.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-sanctuary-with-kids-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/elephant-shower-adventure-in-jaipur-for-uk-tourists.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-shower-in-jaipu.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephant-village-in-jaipur.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/elephant-village-jaipur-a-must-visit-place-for-animal-lovers.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephants-in-a-natural-habitat.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/elephants-ride-bathe-and-bond-with-majestic-giants-at-elefriendride.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/enjoy-elephant-painting-in-jaipurs-festivals.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/ethical-elephant-sanctuary.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/exciting-activities-in-jaipur.webp": {
+    "width": 1900,
+    "height": 720
+  },
+  "/images/blog/source/experience-ethical-elephant-activities-at-jaipurs-top-sanctuary.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/experience-the-majestic-elephant-ride-at-amber-fort.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/golden-triangle-itinerary-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/grand-adventure-awaits-with-elefriendride.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/how-long-do-elephants-live-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/how-much-does-an-elephant-weigh-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/how-to-choose-an-elephant-sanctuary-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/jaipur-2-day-itinerary-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/jaipur-day-tours-with-elefriendride.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/jaipur-night-jeep-safari-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/jaipur-royal-elegance.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/japur-vibrant-bazaar-with-elefriendride.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/jhalana-leopard-safari-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/lion-safari-at-nahargarh-biological-park.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/majestic-elephant-rides-in-jaipur.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/private-tour-guide-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/pushkar-camel-fair-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/rajasthan-festivals-in-november-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/ranthambore-tiger-safari-from-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/taj-mahal-day-trip-from-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/things-to-know-before-elephant-ride-jaipur-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/tourist-places-in-jaipur.webp": {
+    "width": 1280,
+    "height": 642
+  },
+  "/images/blog/source/uk-tourists-to-stay-with-elephants-in-jaipur.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/unforgettable-day-tours-with-elefriendride.webp": {
+    "width": 1920,
+    "height": 720
+  },
+  "/images/blog/source/unique-elephant-tours-await.webp": {
+    "width": 1900,
+    "height": 720
+  },
+  "/images/blog/source/walking-with-elephants.webp": {
+    "width": 1600,
+    "height": 606
+  },
+  "/images/blog/source/what-do-elephants-eat-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/blog/source/what-to-expect-at-elephant-sanctuary-card.webp": {
+    "width": 1920,
+    "height": 700
+  },
+  "/images/gallery/contributed/img-0133.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-0519.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-0532.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-0709.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-0841.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-1511.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-1864.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-1959.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-1968.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-1971.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2001.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2003.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2023.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2704.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2706.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2896.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2902.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2910.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2911.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2912.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2931.webp": {
+    "width": 1352,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2932.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2934.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-2987.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-2989.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-3004.webp": {
+    "width": 1012,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3063.webp": {
+    "width": 1179,
+    "height": 1440
+  },
+  "/images/gallery/contributed/img-3064.webp": {
+    "width": 1024,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3113.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3114.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-3116.webp": {
+    "width": 1440,
+    "height": 1795
+  },
+  "/images/gallery/contributed/img-3125.webp": {
+    "width": 1200,
+    "height": 900
+  },
+  "/images/gallery/contributed/img-3159.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3161.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3164.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3165.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3304.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3307.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/contributed/img-3493.webp": {
+    "width": 1130,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3500.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3503.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3506.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3576.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3722.webp": {
+    "width": 1024,
+    "height": 1800
+  },
+  "/images/gallery/contributed/img-3723.webp": {
+    "width": 1179,
+    "height": 1569
+  },
+  "/images/gallery/contributed/img-3724.webp": {
+    "width": 1154,
+    "height": 1754
+  },
+  "/images/gallery/contributed/img-3725.webp": {
+    "width": 1179,
+    "height": 1554
+  },
+  "/images/gallery/contributed/img-3726.webp": {
+    "width": 1179,
+    "height": 1573
+  },
+  "/images/gallery/contributed/img-3727.webp": {
+    "width": 1179,
+    "height": 886
+  },
+  "/images/gallery/contributed/img-3728.webp": {
+    "width": 1179,
+    "height": 1539
+  },
+  "/images/gallery/contributed/img-3781.webp": {
+    "width": 1179,
+    "height": 1561
+  },
+  "/images/gallery/contributed/img-3782.webp": {
+    "width": 1179,
+    "height": 1196
+  },
+  "/images/gallery/contributed/img-3783.webp": {
+    "width": 1179,
+    "height": 1552
+  },
+  "/images/gallery/gallery-01.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/gallery/gallery-01.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/gallery-02.jpg": {
+    "width": 4872,
+    "height": 3654
+  },
+  "/images/gallery/gallery-02.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/gallery-04.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/gallery/gallery-04.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/gallery-05.jpg": {
+    "width": 3024,
+    "height": 4032
+  },
+  "/images/gallery/gallery-05.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/gallery-06.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/gallery/gallery-06.webp": {
+    "width": 1800,
+    "height": 1350
+  },
+  "/images/gallery/gallery-07.jpg": {
+    "width": 4284,
+    "height": 5712
+  },
+  "/images/gallery/gallery-07.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/gallery/gallery-08.jpg": {
+    "width": 4284,
+    "height": 5712
+  },
+  "/images/gallery/gallery-08.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/hero/elephant-jaipur.PNG": {
+    "width": 1179,
+    "height": 1573
+  },
+  "/images/hero/elephant-jaipur.webp": {
+    "width": 1179,
+    "height": 1573
+  },
+  "/images/sanctuary/sanctuary-elephants.jpg": {
+    "width": 5712,
+    "height": 4284
+  },
+  "/images/sanctuary/sanctuary-elephants.webp": {
+    "width": 1350,
+    "height": 1800
+  },
+  "/images/seo/elefriendride-jaipur-social.jpg": {
+    "width": 1200,
+    "height": 630
+  },
+  "/images/testimonial/elefriendride-group.jpg": {
+    "width": 4872,
+    "height": 3654
+  },
+  "/images/testimonial/elefriendride-group.webp": {
+    "width": 1800,
+    "height": 1350
+  }
+}

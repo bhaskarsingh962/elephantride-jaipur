@@ -1,0 +1,449 @@
+
+---
+const reviews = [
+  {
+    number: "01",
+    title: "A memorable experience",
+    status: "Guest review placeholder",
+  },
+  {
+    number: "02",
+    title: "A special family visit",
+    status: "Guest review placeholder",
+  },
+  {
+    number: "03",
+    title: "Moments with elephants",
+    status: "Guest review placeholder",
+  },
+];
+---
+
+---
+import { getImageDimensions } from "../../data/imageDimensions.js";
+
+const imageSrc = "/images/testimonial/elefriendride-group.webp";
+const imageDimensions = getImageDimensions(imageSrc);
+---
+
+<section class="testimonials-section">
+  <div class="testimonials-container">
+
+    <div class="section-topline">
+      <span></span>
+      <p>VISITOR EXPERIENCES</p>
+    </div>
+
+    <div class="testimonials-heading">
+      <div>
+        <p class="eyebrow">HEAR FROM OUR VISITORS</p>
+
+        <h2>
+          Stories That
+          <em>Stay With You</em>
+        </h2>
+      </div>
+
+      <p class="heading-description">
+        Every visit creates a special connection.
+        Discover the moments and memories that make
+        Elefriendride unique.
+      </p>
+    </div>
+
+    <div class="featured-review">
+      <div class="featured-content">
+        <span class="featured-number">01 / VISITOR STORIES</span>
+
+        <div class="quote-mark">“</div>
+
+        <h3>
+          Every journey begins
+          with a memorable moment.
+        </h3>
+
+        <p class="featured-description">
+          We look forward to sharing genuine stories
+          and experiences from our visitors.
+        </p>
+
+        <div class="review-author">
+          <div class="author-avatar">ER</div>
+          <div>
+            <strong>Elefriendride Visitors</strong>
+            <span>Guest experiences</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="featured-image">
+        <img
+          src={imageSrc}
+          alt="Visitors enjoying their Elefriendride experience"
+          width={imageDimensions.width}
+          height={imageDimensions.height}
+          loading="lazy"
+          decoding="async"
+        />
+
+        <div class="image-caption">
+          <span>JAIPUR · RAJASTHAN</span>
+          <span>01 — 04</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-header">
+      <h3>More Visitor Stories</h3>
+      <span>GUEST EXPERIENCES</span>
+    </div>
+
+    <div class="reviews-grid">
+      {reviews.map((review) => (
+        <article class="review-card">
+          <span class="review-number">{review.number}</span>
+
+          <div class="review-icon">“</div>
+
+          <h4>{review.title}</h4>
+
+          <p class="review-placeholder">
+            {review.status}
+          </p>
+
+          <div class="review-divider"></div>
+
+          <span class="review-label">
+            REAL STORIES COMING SOON
+          </span>
+        </article>
+      ))}
+    </div>
+
+    <div class="testimonial-bottom">
+      <p>
+        Have you visited Elefriendride?
+        We'd love to hear about your experience.
+      </p>
+
+      <a href="/contact">
+        Share Your Experience
+        <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    background: #f8f4eb;
+    padding: 110px 7%;
+  }
+
+  .testimonials-container {
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  .section-topline {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 35px;
+  }
+
+  .section-topline span {
+    width: 38px;
+    height: 1px;
+    background: #b58a4b;
+  }
+
+  .section-topline p,
+  .eyebrow {
+    color: #a64f37;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .testimonials-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 60px;
+  }
+
+  .eyebrow {
+    margin-bottom: 18px;
+  }
+
+  .testimonials-heading h2 {
+    margin: 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5.5vw, 76px);
+    font-weight: 400;
+    line-height: 1.05;
+  }
+
+  .testimonials-heading h2 em {
+    color: #b58a4b;
+    font-weight: 400;
+  }
+
+  .heading-description {
+    max-width: 350px;
+    color: #77736a;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .featured-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 470px;
+    background: #244537;
+  }
+
+  .featured-content {
+    padding: 55px;
+    color: #f8f4eb;
+  }
+
+  .featured-number {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #dcc5a1;
+  }
+
+  .quote-mark {
+    margin-top: 30px;
+    color: #dcc5a1;
+    font-family: Georgia, serif;
+    font-size: 90px;
+    line-height: 1;
+  }
+
+  .featured-content h3 {
+    max-width: 460px;
+    margin: 5px 0 20px;
+    font-family: var(--font-heading);
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.15;
+  }
+
+  .featured-description {
+    max-width: 380px;
+    color: #f8f4eb;
+    opacity: .75;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .author-avatar {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid #dcc5a1;
+    border-radius: 50%;
+    color: #dcc5a1;
+    font-size: 12px;
+  }
+
+  .review-author strong,
+  .review-author span {
+    display: block;
+    font-size: 12px;
+  }
+
+  .review-author span {
+    margin-top: 5px;
+    color: #dcc5a1;
+  }
+
+  .featured-image {
+    position: relative;
+    min-height: 470px;
+    overflow: hidden;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+  }
+
+  .image-caption {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    background: #244537e8;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .reviews-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 75px 0 30px;
+  }
+
+  .reviews-header h3 {
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .reviews-header span,
+  .review-label {
+    color: #a64f37;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #dcc5a1;
+    border-bottom: 1px solid #dcc5a1;
+  }
+
+  .review-card {
+    padding: 35px;
+    border-right: 1px solid #dcc5a1;
+  }
+
+  .review-card:last-child {
+    border-right: 0;
+  }
+
+  .review-number {
+    color: #b58a4b;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .review-icon {
+    margin-top: 25px;
+    color: #b58a4b;
+    font-family: Georgia, serif;
+    font-size: 55px;
+  }
+
+  .review-card h4 {
+    margin: 10px 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 400;
+  }
+
+  .review-placeholder {
+    color: #77736a;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .review-divider {
+    height: 1px;
+    margin: 28px 0 20px;
+    background: #dcc5a1;
+  }
+
+  .testimonial-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .testimonial-bottom p {
+    color: #77736a;
+    font-size: 14px;
+  }
+
+  .testimonial-bottom a {
+    display: inline-flex;
+    gap: 20px;
+    padding: 16px 22px;
+    background: #244537;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background .3s;
+  }
+
+  .testimonial-bottom a:hover {
+    background: #a64f37;
+  }
+
+  @media (max-width: 800px) {
+    .testimonials-section {
+      padding: 75px 6%;
+    }
+
+    .testimonials-heading {
+      display: block;
+    }
+
+    .heading-description {
+      margin-top: 25px;
+    }
+
+    .featured-review {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+      min-height: 350px;
+    }
+
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .review-card {
+      border-right: 0;
+      border-bottom: 1px solid #dcc5a1;
+    }
+
+    .review-card:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .featured-content {
+      padding: 30px;
+    }
+
+    .reviews-header h3 {
+      font-size: 25px;
+    }
+
+    .testimonial-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageIntro from "../../../components/layout/PageIntro.astro";
+import BlogArticleGrid from "../../../components/blog/BlogArticleGrid.astro";
+import { blogArticles } from "../../../data/blogArticles.js";
+
+const pageSize = 12;
+const pageCount = Math.ceil(blogArticles.length / pageSize);
+
+export function getStaticPaths() {
+  const pageSize = 12;
+  const pageCount = Math.ceil(blogArticles.length / pageSize);
+
+  return Array.from({ length: pageCount - 1 }, (_, index) => {
+    const page = index + 2;
+    return {
+      params: { page: String(page) },
+      props: {
+        page,
+        articles: blogArticles.slice((page - 1) * pageSize, page * pageSize),
+      },
+    };
+  });
+}
+
+const { page, articles } = Astro.props;
+---
+
+<BaseLayout
+  title={`Jaipur Travel Journal - Page ${page} | Elefriendride`}
+  description={`Browse page ${page} of Elefriendride's Jaipur travel journal, with visitor guides and information about elephant experiences in Rajasthan.`}
+>
+  <PageIntro
+    eyebrow="THE ELEFRIENDRIDE JOURNAL"
+    title="Stories & Inspiration"
+    description="Explore Jaipur travel inspiration, Elefriendride experiences and helpful ideas for planning your visit."
+    image="/images/blog/blog-elephants.webp"
+  />
+  <BlogArticleGrid articles={articles} currentPage={page} totalPages={pageCount} />
+</BaseLayout>

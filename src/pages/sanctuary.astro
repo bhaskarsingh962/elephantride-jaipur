@@ -1,0 +1,238 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+import { activities } from "../data/activities.js";
+---
+
+<BaseLayout
+  title="Elephant Sanctuary in Jaipur | Elefriendride"
+  description="Explore the Elefriendride elephant sanctuary in Jaipur, Rajasthan, and learn about the encounters and activities listed for visitors."
+>
+  <PageIntro
+    eyebrow="DISCOVER OUR SANCTUARY"
+    title="A Place to Connect with Gentle Giants"
+    description="Explore the sanctuary, its surroundings and the elephant experiences featured by Elefriendride."
+    image="/images/sanctuary/sanctuary-elephants.webp"
+  />
+
+  <div class="sanctuary-page">
+    <section class="sanctuary-intro">
+      <div>
+        <p class="sanctuary-eyebrow">ELEFRIENDRIDE · JAIPUR</p>
+        <h2>Discover the setting and the experiences.</h2>
+      </div>
+      <div>
+        <p>
+          Elefriendride's website describes a sanctuary in Jaipur where
+          visitors can learn about elephants and discover experiences offered
+          at the destination. Browse the activities below to learn more about
+          each one.
+        </p>
+        <a href="/experiences">View all experiences <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="sanctuary-experiences" aria-labelledby="sanctuary-activities">
+      <div class="sanctuary-section-heading">
+        <p>EXPLORE THE ACTIVITIES</p>
+        <h2 id="sanctuary-activities">Find an experience to explore.</h2>
+      </div>
+
+      <div class="sanctuary-grid">
+        {activities.map((activity) => (
+          <article class="sanctuary-card">
+            <a href={`/experiences/${activity.slug}`} class="sanctuary-card-image">
+              <img
+                src={activity.image}
+                alt={`${activity.title} at Elefriendride, Jaipur`}
+                width={activity.imageDimensions.width}
+                height={activity.imageDimensions.height}
+                loading="lazy"
+                decoding="async"
+              />
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="sanctuary-card-copy">
+              <p>{activity.number} / EXPERIENCE</p>
+              <h3>{activity.title}</h3>
+              <p>{activity.description}</p>
+              <a href={`/experiences/${activity.slug}`}>Discover this experience <span>→</span></a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <p class="sanctuary-note">
+        Experience availability and arrangements can change. Please contact
+        Elefriendride to confirm details before your visit.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .sanctuary-page {
+    background: #f8f4eb;
+  }
+
+  .sanctuary-intro {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 50px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 95px 7%;
+  }
+
+  .sanctuary-eyebrow,
+  .sanctuary-section-heading > p {
+    color: #a64f37;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .sanctuary-intro h2,
+  .sanctuary-section-heading h2 {
+    margin: 18px 0 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .sanctuary-intro > div:last-child p {
+    margin: 0;
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .sanctuary-intro > div:last-child a,
+  .sanctuary-card-copy > a {
+    display: inline-flex;
+    gap: 16px;
+    margin-top: 22px;
+    color: #a64f37;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .sanctuary-experiences {
+    padding: 85px 7% 100px;
+    background: #eee8dc;
+  }
+
+  .sanctuary-section-heading,
+  .sanctuary-grid,
+  .sanctuary-note {
+    max-width: 1350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .sanctuary-section-heading {
+    margin-bottom: 48px;
+  }
+
+  .sanctuary-section-heading h2 {
+    max-width: 720px;
+    margin-top: 14px;
+  }
+
+  .sanctuary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .sanctuary-card {
+    min-width: 0;
+    background: #f8f4eb;
+  }
+
+  .sanctuary-card-image {
+    position: relative;
+    display: block;
+    height: 310px;
+    overflow: hidden;
+    background: #dcc5a1;
+  }
+
+  .sanctuary-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .sanctuary-card:hover img {
+    transform: scale(1.04);
+  }
+
+  .sanctuary-card-image > span {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    background: #d7b77e;
+    color: #292923;
+  }
+
+  .sanctuary-card-copy {
+    padding: 24px;
+  }
+
+  .sanctuary-card-copy > p:first-child {
+    color: #a64f37;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .sanctuary-card-copy h3 {
+    margin: 12px 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .sanctuary-card-copy > p:last-of-type {
+    min-height: 66px;
+    color: #706d65;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .sanctuary-note {
+    margin-top: 35px;
+    color: #706d65;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 900px) {
+    .sanctuary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 650px) {
+    .sanctuary-intro {
+      grid-template-columns: 1fr;
+      padding: 70px 6%;
+    }
+
+    .sanctuary-experiences {
+      padding: 70px 6%;
+    }
+
+    .sanctuary-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,160 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+import { getImageDimensions } from "../data/imageDimensions.js";
+
+const storyImage = "/images/about/about-elephant.webp";
+const storyImageDimensions = getImageDimensions(storyImage);
+---
+
+<BaseLayout
+  title="About Elefriendride | Elephant Experiences in Jaipur"
+  description="Meet Elefriendride, a Jaipur destination for elephant encounters in Rajasthan. Learn about the sanctuary, visitor experiences and responsible tourism approach."
+>
+  <PageIntro
+    eyebrow="WELCOME TO ELEFRIENDRIDE"
+    title="A Jaipur Experience to Remember"
+    description="Learn about Elefriendride's commitment to rescued Asian elephants, responsible tourism and meaningful visitor experiences in Jaipur."
+    image={storyImage}
+  />
+
+  <div class="story-section">
+    <div class="story-image">
+      <img
+        src={storyImage}
+        alt="Visitor beside an elephant at Elefriendride"
+        width={storyImageDimensions.width}
+        height={storyImageDimensions.height}
+        loading="lazy"
+      />
+    </div>
+    <div class="story-copy">
+      <p class="story-eyebrow">OUR STORY</p>
+      <h2>Unforgettable adventures. Heartfelt connections.</h2>
+      <p>
+        Welcome to Elefriendride, where unforgettable adventures and
+        heartwarming experiences await you in the vibrant city of Jaipur.
+        Nestled in the heart of Rajasthan, we offer a chance to connect with
+        rescued Asian elephants and create memories that last a lifetime. We
+        champion responsible tourism.
+      </p>
+      <p>
+        Our elephant rides, safaris, feeding sessions, walks and painting
+        experiences are designed with the well-being of our gentle giants at
+        the core. No chains, no tricks—just genuine connection. Go beyond the
+        tourist trap: witness elephant interactions, gain insights into
+        conservation efforts and forge a deeper connection with these
+        intelligent beings. Your visit supports our efforts to provide a safe
+        haven for rescued elephants and contribute to broader conservation
+        initiatives.
+      </p>
+      <p>
+        We raise awareness about the threats Asian elephants face and inspire
+        positive change for future generations. We believe in fostering a
+        deep connection between people and elephants, and our dedicated team
+        of caretakers ensures that each elephant receives care and respect.
+      </p>
+      <p>
+        At Elefriendride, we are committed to promoting ethical and
+        sustainable tourism practices, ensuring that both our guests and our
+        elephants benefit from every interaction. Join us in our mission to
+        protect and preserve these magnificent creatures for generations to
+        come, and experience the magic of Elefriendride for yourself.
+      </p>
+      <div class="story-links">
+        <a href="/experiences">Explore Experiences <span>↗</span></a>
+        <a href="/sanctuary">Discover the Sanctuary <span>↗</span></a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .story-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(40px, 8vw, 110px);
+    max-width: 1440px;
+    margin: auto;
+    padding: 100px 7%;
+  }
+
+  .story-image {
+    height: min(680px, 65vw);
+    min-height: 400px;
+    background: #dcc5a1;
+  }
+
+  .story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .story-copy {
+    max-width: 620px;
+  }
+
+  .story-eyebrow {
+    color: #a64f37;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .story-copy h2 {
+    margin: 22px 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5vw, 66px);
+    font-weight: 400;
+    line-height: 1.08;
+  }
+
+  .story-copy > p:not(.story-eyebrow) {
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .story-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .story-links a {
+    display: inline-flex;
+    gap: 18px;
+    padding: 15px 19px;
+    background: #244537;
+    color: #f8f4eb;
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .story-links a:hover {
+    background: #a64f37;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 760px) {
+    .story-section {
+      grid-template-columns: 1fr;
+      padding: 70px 6%;
+    }
+
+    .story-image {
+      height: 460px;
+      min-height: 0;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .story-image {
+      height: 350px;
+    }
+  }
+</style>

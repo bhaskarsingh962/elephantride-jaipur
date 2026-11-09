@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+---
+
+<BaseLayout
+  title="Privacy Policy | Elefriendride Jaipur"
+  description="Learn how information is handled when you use the Elefriendride website."
+>
+  <PageIntro
+    eyebrow="WEBSITE INFORMATION"
+    title="Privacy"
+    description="A clear explanation of how this static website handles enquiries and third-party links."
+  />
+  <div class="policy-content">
+    <h2>Enquiries</h2>
+    <p>
+      This website has no booking database or server-side enquiry form. When
+      you submit the visit enquiry form, your browser opens WhatsApp with the
+      details you entered. Review the message and choose whether to send it.
+      WhatsApp handles any information you send under its own terms and
+      privacy policy.
+    </p>
+    <h2>Third-party services</h2>
+    <p>
+      The site loads Google Fonts, offers automatic page translation through
+      Google Translate, and displays a Google Maps embed or link. These
+      providers may receive information such as your browser's request, IP
+      address, and translation preference when their services load. Google
+      Translate may use cookies to remember the selected language. Google's
+      own privacy terms apply to these services.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      For questions about an enquiry you have sent, contact Elefriendride
+      directly using the details on the <a href="/contact">contact page</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .policy-content {
+    max-width: 860px;
+    margin: auto;
+    padding: 75px 7% 100px;
+  }
+
+  .policy-content h2 {
+    margin: 32px 0 10px;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .policy-content p {
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .policy-content a {
+    color: #a64f37;
+  }
+</style>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageIntro from "../components/layout/PageIntro.astro";
+---
+
+<BaseLayout
+  title="Website Terms | Elefriendride Jaipur"
+  description="Information about using the Elefriendride website and making an enquiry."
+>
+  <PageIntro
+    eyebrow="WEBSITE INFORMATION"
+    title="Website Terms"
+    description="Information to keep in mind when browsing this website and contacting Elefriendride."
+  />
+  <div class="policy-content">
+    <h2>Website information</h2>
+    <p>
+      The website describes Elefriendride and experiences listed for visitors.
+      Details may change; contact Elefriendride directly to confirm current
+      availability and arrangements before travelling.
+    </p>
+    <h2>Enquiries are not reservations</h2>
+    <p>
+      Submitting the visit form opens a WhatsApp message for you to review and
+      send. It does not store a booking or confirm a reservation. A visit is
+      not confirmed by using this website.
+    </p>
+    <h2>Third-party links</h2>
+    <p>
+      Links to services such as WhatsApp and Google Maps open third-party
+      websites or applications. Their services are governed by their own
+      terms.
+    </p>
+    <p>
+      For questions about a visit, use the details on the
+      <a href="/contact">contact page</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .policy-content {
+    max-width: 860px;
+    margin: auto;
+    padding: 75px 7% 100px;
+  }
+
+  .policy-content h2 {
+    margin: 32px 0 10px;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .policy-content p {
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .policy-content a {
+    color: #a64f37;
+  }
+</style>

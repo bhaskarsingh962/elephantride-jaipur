@@ -1,0 +1,243 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/layout/PageIntro.astro";
+import { blogArticles } from "../../data/blogArticles.js";
+
+export function getStaticPaths() {
+  return blogArticles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const articleTitleForSearch =
+  article.title.length <= 48
+    ? article.title
+    : article.title
+        .slice(0, 48)
+        .replace(/\s+\S*$/, "")
+        .replace(/[|:;,.-]+$/, "");
+const metaTitle = `${articleTitleForSearch} | Elefriendride`;
+const relatedArticles = [
+  ...blogArticles.filter(
+    (item) => item.slug !== article.slug && item.category === article.category
+  ),
+  ...blogArticles.filter(
+    (item) => item.slug !== article.slug && item.category !== article.category
+  ),
+].slice(0, 3);
+const articleStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: article.title,
+  description: article.description,
+  image: new URL(article.image, Astro.site).href,
+  mainEntityOfPage: new URL(
+    `${Astro.url.pathname.replace(/\/+$/, "")}/`,
+    Astro.site
+  ).href,
+  publisher: {
+    "@type": "Organization",
+    "@id": `${Astro.site}#business`,
+    name: "Elefriendride",
+    url: Astro.site.href,
+  },
+  ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
+};
+---
+
+<BaseLayout
+  title={metaTitle}
+  description={article.description}
+  type="article"
+  structuredData={articleStructuredData}
+>
+  <PageIntro
+    eyebrow={article.category}
+    title={article.title}
+    description={article.introduction}
+    image={article.image}
+  />
+
+  <div class="article-page">
+    <article class="article-body">
+      <img
+        class="article-cover"
+        src={article.image}
+        alt={article.title}
+        width={article.imageDimensions.width}
+        height={article.imageDimensions.height}
+        loading="lazy"
+        decoding="async"
+      />
+      {article.sections.map((section) => (
+        <section class="article-section">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+      ))}
+      <a href="/blog" class="article-back">← Back to the journal</a>
+    </article>
+
+    <aside class="article-related">
+      <p>CONTINUE EXPLORING</p>
+      <h2>More from the journal</h2>
+      {relatedArticles.map((related) => (
+        <a href={`/blog/${related.slug}`} class="related-article">
+          <img
+            src={related.image}
+            alt=""
+            width={related.imageDimensions.width}
+            height={related.imageDimensions.height}
+            loading="lazy"
+            decoding="async"
+          />
+          <span>
+            <small>{related.category}</small>
+            <strong>{related.title}</strong>
+          </span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))}
+      <a href="/experiences" class="related-experiences">Explore Elefriendride experiences ↗</a>
+    </aside>
+  </div>
+</BaseLayout>
+
+<style>
+  .article-page {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(270px, 0.7fr);
+    gap: 70px;
+    max-width: 1350px;
+    margin: auto;
+    padding: 85px 7% 100px;
+  }
+
+  .article-body {
+    min-width: 0;
+  }
+
+  .article-related {
+    min-width: 0;
+  }
+
+  .article-cover {
+    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
+  }
+
+  .article-section {
+    margin-top: 42px;
+  }
+
+  .article-section h2,
+  .article-related h2 {
+    margin: 0 0 16px;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 500;
+  }
+
+  .article-section p {
+    color: #706d65;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .article-back {
+    display: inline-block;
+    margin-top: 28px;
+    color: #a64f37;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .article-related {
+    align-self: start;
+    padding: 28px;
+    background: #eee8dc;
+  }
+
+  .article-related > p {
+    color: #a64f37;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .article-related h2 {
+    margin-bottom: 22px;
+    font-size: 32px;
+  }
+
+  .related-article {
+    display: grid;
+    grid-template-columns: 82px 1fr auto;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(36, 69, 55, 0.16);
+    color: #244537;
+    text-decoration: none;
+  }
+
+  .related-article img {
+    width: 82px;
+    height: 72px;
+    object-fit: cover;
+  }
+
+  .related-article small,
+  .related-article strong {
+    display: block;
+  }
+
+  .related-article small {
+    margin-bottom: 5px;
+    color: #a64f37;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .related-article strong {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .related-experiences {
+    display: inline-block;
+    margin-top: 24px;
+    color: #a64f37;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 800px) {
+    .article-page {
+      grid-template-columns: 1fr;
+      gap: 45px;
+      padding: 65px 6% 80px;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .article-related {
+      padding: 18px;
+    }
+
+    .related-article {
+      grid-template-columns: 58px minmax(0, 1fr) auto;
+      gap: 9px;
+    }
+
+    .related-article img {
+      width: 58px;
+      height: 58px;
+    }
+  }
+</style>

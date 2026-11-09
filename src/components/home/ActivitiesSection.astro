@@ -1,0 +1,222 @@
+
+---
+import { activities } from "../../data/activities.js";
+---
+
+<section class="activities-section">
+
+  <div class="activities-header">
+    <div>
+      <span class="section-eyebrow">
+        DISCOVER OUR EXPERIENCES
+      </span>
+
+      <h2>
+        Moments That Stay
+        <em>Forever</em>
+      </h2>
+    </div>
+
+    <a href="/experiences" class="all-experiences">
+      View All Experiences ↗
+    </a>
+  </div>
+
+  <div class="activities-grid">
+    {activities.map((activity) => (
+      <article class="activity-card">
+
+        <a href={`/experiences/${activity.slug}`} class="activity-image">
+          <img
+            src={activity.image}
+            alt={activity.title + " at Elefriendride Jaipur"}
+            height={activity.imageDimensions.height}
+            width={activity.imageDimensions.width}
+            loading="lazy"
+            decoding="async"
+          />
+
+          <span class="activity-number">
+            {activity.number}
+          </span>
+
+          <span class="image-arrow">↗</span>
+        </a>
+
+        <div class="activity-content">
+          <h3>{activity.title}</h3>
+
+          <p>{activity.description}</p>
+
+          <a href={`/experiences/${activity.slug}`}>
+            Discover More <span>→</span>
+          </a>
+        </div>
+
+      </article>
+    ))}
+  </div>
+
+</section>
+
+<style>
+  .activities-section {
+    padding: 110px 7%;
+    background: #eee8dc;
+  }
+
+  .activities-header {
+    max-width: 1350px;
+    margin: 0 auto 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+  }
+
+  .section-eyebrow {
+    color: #a64f37;
+    letter-spacing: 3px;
+    font-size: 11px;
+  }
+
+  .activities-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5vw, 65px);
+    font-weight: 400;
+    color: #244537;
+    line-height: 1.1;
+    margin: 20px 0 0;
+  }
+
+  .activities-header h2 em {
+    color: #b58a4b;
+  }
+
+  .all-experiences {
+    color: #244537;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid #b58a4b;
+    padding-bottom: 8px;
+    white-space: nowrap;
+  }
+
+  .activities-grid {
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 25px;
+  }
+
+  .activity-card {
+    min-width: 0;
+  }
+
+  .activity-image {
+    position: relative;
+    display: block;
+    height: 360px;
+    overflow: hidden;
+    background: #dcc5a1;
+  }
+
+  .activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .activity-card:hover .activity-image img {
+    transform: scale(1.06);
+  }
+
+  .activity-number {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 9px 12px;
+    background: #f8f4eb;
+    color: #244537;
+    font-size: 11px;
+  }
+
+  .image-arrow {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: #d7b77e;
+    color: #292923;
+    transition: background 0.2s;
+  }
+
+  .activity-card:hover .image-arrow {
+    background: #f8f4eb;
+  }
+
+  .activity-content {
+    padding: 22px 3px;
+  }
+
+  .activity-content h3 {
+    font-family: var(--font-heading);
+    font-size: 29px;
+    font-weight: 500;
+    color: #244537;
+    margin: 0 0 12px;
+  }
+
+  .activity-content p {
+    color: #706d65;
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
+  }
+
+  .activity-content > a {
+    display: inline-flex;
+    gap: 15px;
+    margin-top: 12px;
+    color: #a64f37;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 950px) {
+    .activities-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .activity-image {
+      height: 320px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .activities-section {
+      padding: 75px 6%;
+    }
+
+    .activities-header {
+      align-items: start;
+      flex-direction: column;
+      margin-bottom: 35px;
+    }
+
+    .activities-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+
+    .activity-image {
+      height: 390px;
+    }
+  }
+</style>

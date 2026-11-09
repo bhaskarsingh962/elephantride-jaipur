@@ -1,0 +1,83 @@
+
+---
+import Gallery from "./Gallery.jsx";
+---
+
+<section class="gallery-section" id="gallery">
+  <div class="gallery-header">
+    <div>
+      <span>CAPTURED MOMENTS</span>
+      <h2>Memories That <em>Last Forever</em></h2>
+      <p>
+        Explore photographs and moments shared by
+        visitors at Elefriendride.
+      </p>
+    </div>
+
+    <a href="/gallery">
+      Explore Full Gallery ↗
+    </a>
+  </div>
+
+  <Gallery client:visible preview />
+</section>
+
+<style>
+  .gallery-section {
+    padding: 110px 7%;
+    background: #f8f4eb;
+  }
+
+  .gallery-header {
+    max-width: 1350px;
+    margin: 0 auto 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+  }
+
+  .gallery-header span {
+    color: #a64f37;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .gallery-header h2 {
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    margin: 18px 0 12px;
+  }
+
+  .gallery-header h2 em {
+    color: #b58a4b;
+  }
+
+  .gallery-header p {
+    color: #77736a;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .gallery-header > a {
+    color: #244537;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid #b58a4b;
+    padding-bottom: 8px;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 650px) {
+    .gallery-section {
+      padding: 75px 6%;
+    }
+
+    .gallery-header {
+      align-items: start;
+      flex-direction: column;
+    }
+  }
+</style>

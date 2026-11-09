@@ -1,0 +1,85 @@
+---
+const { eyebrow, title, description, image } = Astro.props;
+---
+
+<section
+  class:list={["page-intro", image && "page-intro-image"]}
+  style={image && `--page-image: url("${image}")`}
+>
+  <div class="page-intro-content">
+    <p>{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="page-intro-description">{description}</p>
+  </div>
+</section>
+
+<style>
+  .page-intro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 390px;
+    overflow: hidden;
+    background: #244537;
+    color: #f8f4eb;
+    isolation: isolate;
+  }
+
+  .page-intro::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(90deg, rgba(20, 39, 31, 0.9), rgba(20, 39, 31, 0.52)),
+      var(--page-image, none) center 45% / cover no-repeat;
+    content: "";
+  }
+
+  .page-intro-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 75px 7%;
+  }
+
+  .page-intro-content > p:first-child {
+    margin: 0 0 20px;
+    color: #d7b77e;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .page-intro h1 {
+    max-width: 900px;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(46px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 1.03;
+  }
+
+  .page-intro-description {
+    max-width: 660px;
+    margin: 22px 0 0;
+    color: rgba(248, 244, 235, 0.88);
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  @media (max-width: 600px) {
+    .page-intro {
+      min-height: 360px;
+    }
+
+    .page-intro-content {
+      padding: 60px 7%;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .page-intro h1 {
+      font-size: clamp(30px, 10vw, 46px);
+    }
+  }
+</style>

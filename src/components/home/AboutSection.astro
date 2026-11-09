@@ -1,0 +1,219 @@
+
+---
+import { getImageDimensions } from "../../data/imageDimensions.js";
+
+const imageSrc = "/images/about/about-elephant.webp";
+const imageDimensions = getImageDimensions(imageSrc);
+---
+
+<section class="about-section" id="about">
+  <div class="about-container">
+
+    <div class="about-image-wrapper">
+      <img
+        src={imageSrc}
+        alt="A visitor experiencing an elephant encounter at Elefriendride"
+        width={imageDimensions.width}
+        height={imageDimensions.height}
+        loading="lazy"
+        decoding="async"
+      />
+
+      <div class="image-caption">
+        <span>ELEFRIENDRIDE</span>
+        <span>JAIPUR · RAJASTHAN</span>
+      </div>
+    </div>
+
+    <div class="about-content">
+
+      <span class="section-eyebrow">
+        WELCOME TO ELEFRIENDRIDE
+      </span>
+
+      <h2>
+        Experience the
+        <span>Magic of Elephants</span>
+      </h2>
+
+      <p class="about-description">
+        Welcome to Elefriendride, where unforgettable adventures and
+        heartwarming experiences await in Jaipur. Discover our commitment
+        to responsible tourism and meaningful connections with elephants.
+      </p>
+
+      <div class="about-divider"></div>
+
+      <div class="about-details">
+        <div>
+          <span class="detail-number">01</span>
+          <h3>Our Story</h3>
+          <p>
+            Learn about our mission to care for rescued Asian elephants and
+            promote responsible tourism.
+          </p>
+        </div>
+
+        <div>
+          <span class="detail-number">02</span>
+          <h3>Our Experiences</h3>
+          <p>
+            Discover elephant encounters, rides, feeding, walks and painting
+            experiences.
+          </p>
+        </div>
+      </div>
+
+      <a href="/about" class="about-button">
+        Discover Our Story
+        <span>↗</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    padding: 120px 7%;
+    background: #f8f4eb;
+  }
+
+  .about-container {
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+  }
+
+  .about-image-wrapper {
+    position: relative;
+    height: 650px;
+    background: #dcc5a1;
+  }
+
+  .about-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(36, 69, 55, 0.9);
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .section-eyebrow {
+    color: #a64f37;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .about-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 1.05;
+    font-weight: 400;
+    color: #244537;
+    margin: 25px 0;
+  }
+
+  .about-content h2 span {
+    display: block;
+    color: #b58a4b;
+    font-style: italic;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 2;
+    color: #68665e;
+    max-width: 540px;
+  }
+
+  .about-divider {
+    height: 1px;
+    background: #dcc5a1;
+    margin: 35px 0;
+  }
+
+  .about-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+  }
+
+  .detail-number {
+    color: #b58a4b;
+    font-size: 12px;
+  }
+
+  .about-details h3 {
+    font-family: var(--font-heading);
+    color: #244537;
+    font-size: 26px;
+    margin: 10px 0;
+  }
+
+  .about-details p {
+    color: #77736a;
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-button {
+    display: inline-flex;
+    gap: 30px;
+    margin-top: 30px;
+    padding: 16px 22px;
+    background: #244537;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.2s;
+  }
+
+  .about-button:hover {
+    background: #a64f37;
+  }
+
+  @media (max-width: 850px) {
+    .about-section {
+      padding: 75px 6%;
+    }
+
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+
+    .about-image-wrapper {
+      height: 480px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-image-wrapper {
+      height: 380px;
+    }
+
+    .about-details {
+      grid-template-columns: 1fr;
+    }
+
+    .image-caption {
+      font-size: 7px;
+    }
+  }
+</style>

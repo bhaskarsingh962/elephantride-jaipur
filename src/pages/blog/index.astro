@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/layout/PageIntro.astro";
+import BlogArticleGrid from "../../components/blog/BlogArticleGrid.astro";
+import { blogArticles } from "../../data/blogArticles.js";
+
+const pageSize = 12;
+const pageCount = Math.ceil(blogArticles.length / pageSize);
+const articles = blogArticles.slice(0, pageSize);
+---
+
+<BaseLayout
+  title="Jaipur Travel Blog & Elephant Guides | Elefriendride"
+  description="Read Jaipur travel guides and elephant experience articles from Elefriendride. Find visitor information for planning a visit to Rajasthan."
+>
+  <PageIntro
+    eyebrow="THE ELEFRIENDRIDE JOURNAL"
+    title="Stories & Inspiration"
+    description="Explore Jaipur travel inspiration, Elefriendride experiences and helpful ideas for planning your visit."
+    image="/images/blog/blog-elephants.webp"
+  />
+  <BlogArticleGrid articles={articles} currentPage={1} totalPages={pageCount} />
+</BaseLayout>

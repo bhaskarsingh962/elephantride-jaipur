@@ -1,0 +1,322 @@
+
+---
+import { getImageDimensions } from "../../data/imageDimensions.js";
+
+const heroImage = "/images/hero/elephant-jaipur.webp";
+const heroDimensions = getImageDimensions(heroImage);
+---
+
+<section class="hero-section">
+  <img
+    class="hero-image"
+    src={heroImage}
+    alt="Elephant experience at Elefriendride in Jaipur, Rajasthan"
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+    width={heroDimensions.width}
+    height={heroDimensions.height}
+  />
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span>JAIPUR · RAJASTHAN · INDIA</span>
+    </div>
+
+    <h1>
+      Discover the World
+      <br />
+      of <span>Elephants</span>
+    </h1>
+
+    <p class="hero-description">
+      Explore the beauty, heritage and experiences
+      of Elefriendride in the heart of Rajasthan.
+    </p>
+
+    <div class="hero-actions">
+      <a href="/experiences" class="primary-button">
+        Explore Experiences
+        <span aria-hidden="true">↗</span>
+      </a>
+
+      <a href="/contact" class="secondary-button">
+        Plan Your Visit
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-bottom">
+    <span>AN UNFORGETTABLE JAIPUR EXPERIENCE</span>
+    <a href="#about">DISCOVER MORE ↓</a>
+  </div>
+
+  <div class="hero-index" aria-hidden="true">
+    01 <span></span> 06
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    min-height: 720px;
+    height: min(820px, calc(100svh - 82px));
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #172d25;
+    color: #f8f4eb;
+    isolation: isolate;
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    animation: hero-image-reveal 1.3s ease-out both;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(
+        90deg,
+        rgba(20, 39, 31, 0.88) 0%,
+        rgba(20, 39, 31, 0.65) 43%,
+        rgba(20, 39, 31, 0.12) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(20, 39, 31, 0.42),
+        transparent 35%
+      );
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 80px 9%;
+    animation: content-reveal 0.9s ease-out both;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #e2c28c;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 28px;
+  }
+
+  .eyebrow-line {
+    width: 35px;
+    height: 1px;
+    background: #d7b77e;
+  }
+
+  .hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(54px, 7vw, 100px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -2px;
+    max-width: 900px;
+    margin: 0;
+  }
+
+  .hero-content h1 span {
+    color: #d7b77e;
+    font-style: italic;
+  }
+
+  .hero-description {
+    max-width: 510px;
+    margin-top: 30px;
+    color: rgba(248, 244, 235, 0.85);
+    font-size: 16px;
+    line-height: 1.9;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    margin-top: 38px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 0 24px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .primary-button {
+    background: #d7b77e;
+    color: #292923;
+  }
+
+  .primary-button:hover {
+    background: #f0d9b0;
+    transform: translateY(-3px);
+  }
+
+  .secondary-button {
+    border: 1px solid rgba(248, 244, 235, 0.65);
+    color: #fff;
+  }
+
+  .secondary-button:hover {
+    background: #f8f4eb;
+    color: #244537;
+  }
+
+  .hero-bottom {
+    position: absolute;
+    bottom: 32px;
+    left: 9%;
+    right: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(248, 244, 235, 0.8);
+  }
+
+  .hero-bottom a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .hero-index {
+    position: absolute;
+    right: 5%;
+    bottom: 45%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    color: white;
+  }
+
+  .hero-index span {
+    width: 40px;
+    height: 1px;
+    background: #d7b77e;
+  }
+
+  @keyframes content-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-image-reveal {
+    from {
+      opacity: 0.5;
+      transform: scale(1.04);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      min-height: 680px;
+      height: calc(100svh - 72px);
+      max-height: 850px;
+    }
+
+    .hero-image {
+      object-position: 60% center;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(20, 39, 31, 0.78),
+          rgba(20, 39, 31, 0.3)
+        ),
+        linear-gradient(
+          0deg,
+          rgba(20, 39, 31, 0.65),
+          transparent 75%
+        );
+    }
+
+    .hero-content {
+      padding: 60px 7%;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(48px, 10vw, 72px);
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+
+    .hero-index {
+      display: none;
+    }
+
+    .hero-bottom {
+      left: 7%;
+      right: 7%;
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero-actions {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .hero-actions a {
+      width: 100%;
+    }
+
+    .hero-bottom {
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-image,
+    .hero-content {
+      animation: none;
+    }
+
+    .primary-button {
+      transition: none;
+    }
+  }
+</style>
