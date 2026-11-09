@@ -38,6 +38,14 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## SEO deployment configuration
+
+Set the `SITE_URL` environment variable in the deployment environment to the
+confirmed production origin (for example, `https://your-confirmed-domain.com`).
+Astro uses this setting for canonical URLs, structured data, the sitemap, and
+`robots.txt`. Until the production domain is confirmed, builds use
+`https://example.com` as a safe placeholder; do not deploy that placeholder.
+
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
