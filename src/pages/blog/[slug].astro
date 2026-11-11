@@ -18,7 +18,7 @@ const articleTitleForSearch =
         .slice(0, 48)
         .replace(/\s+\S*$/, "")
         .replace(/[|:;,.-]+$/, "");
-const metaTitle = `${articleTitleForSearch} | Elefriendride`;
+const metaTitle = `${articleTitleForSearch} | Elephant Ride Jaipur`;
 const relatedArticles = [
   ...blogArticles.filter(
     (item) => item.slug !== article.slug && item.category === article.category
@@ -40,7 +40,7 @@ const articleStructuredData = {
   publisher: {
     "@type": "Organization",
     "@id": `${Astro.site}#business`,
-    name: "Elefriendride",
+    name: "Elephant Ride Jaipur",
     url: Astro.site.href,
   },
   ...(article.publishedAt ? { datePublished: article.publishedAt } : {}),
@@ -100,7 +100,7 @@ const articleStructuredData = {
           <span aria-hidden="true">↗</span>
         </a>
       ))}
-      <a href="/experiences" class="related-experiences">Explore Elefriendride experiences ↗</a>
+      <a href="/experiences" class="related-experiences">Explore Elephant Ride Jaipur experiences ↗</a>
     </aside>
   </div>
 </BaseLayout>

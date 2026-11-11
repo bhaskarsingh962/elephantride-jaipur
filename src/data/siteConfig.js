@@ -1,15 +1,15 @@
 export const siteConfig = {
-  name: "Elefriendride",
+  name: "Elephant Ride Jaipur",
 
-  tagline: "Discover the World of Elephants",
+  tagline: "Elephant Rides and Experiences in Jaipur",
 
   phone: "+919521228600",
 
   displayPhone: "+91 95212 28600",
 
-  additionalPhone: "+916376164080",
+  additionalPhone: "+916376163080",
 
-  displayAdditionalPhone: "+91 63761 64080",
+  displayAdditionalPhone: "+91 63761 63080",
 
   email: "fardeenkhan06032004@gmail.com",
 

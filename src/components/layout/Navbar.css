@@ -1,6 +1,6 @@
 
 /* =================================
-   ELEFRIENDRIDE NAVBAR
+   ELEPHANT RIDE JAIPUR NAVBAR
 ================================= */
 
 .site-navbar {
@@ -58,9 +58,9 @@
 
 .brand-name {
   font-family: var(--font-heading);
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 1.2;
 }
 
@@ -453,7 +453,8 @@
   }
 
   .brand-name {
-    font-size: 21px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
   }
 
   .language-control.mobile-language-active {

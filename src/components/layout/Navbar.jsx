@@ -190,7 +190,7 @@ export default function Navbar({ currentPath }) {
           <a
             href="/"
             className="navbar-brand"
-            aria-label="Elefriendride homepage"
+            aria-label="Elephant Ride Jaipur homepage"
             onClick={closeMenu}
           >
             <img
@@ -202,7 +202,7 @@ export default function Navbar({ currentPath }) {
             />
             <span className="brand-copy">
               <span className="brand-name">
-                ELEFRIENDRIDE
+                ELEPHANT RIDE JAIPUR
               </span>
 
               <span className="brand-location">
@@ -311,7 +311,7 @@ export default function Navbar({ currentPath }) {
         <div className="mobile-navigation-inner">
 
           <div className="mobile-menu-heading">
-            <span>EXPLORE ELEFRIENDRIDE</span>
+            <span>EXPLORE ELEPHANT RIDE JAIPUR</span>
             <span>JAIPUR · INDIA</span>
           </div>
 
@@ -348,7 +348,7 @@ export default function Navbar({ currentPath }) {
           </a>
 
           <div className="mobile-menu-footer">
-            <span>ELEFRIENDRIDE</span>
+            <span>ELEPHANT RIDE JAIPUR</span>
             <span>AN EXPERIENCE IN RAJASTHAN</span>
           </div>
 

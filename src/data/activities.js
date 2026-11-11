@@ -5,7 +5,7 @@ const activityDefinitions = [
   {
     id: 1,
     number: "01",
-    title: "Elephant Meeting",
+    title: "Elephant Meeting in Jaipur",
     slug: "elephant-meeting",
     image: "/images/activities/elephant-meeting.webp",
     description:
@@ -24,7 +24,7 @@ const activityDefinitions = [
   {
     id: 2,
     number: "02",
-    title: "Elephant Ride",
+    title: "Elephant Ride in Jaipur",
     slug: "elephant-ride",
     image: "/images/activities/elephant-ride.webp",
     description:
@@ -47,15 +47,15 @@ const activityDefinitions = [
   {
     id: 3,
     number: "03",
-    title: "Walking with Elephants",
+    title: "Walking with Elephants in Jaipur",
     slug: "walking-with-elephants",
-    image: "/images/activities/elephant-walking.webp",
+    image: "/images/new%20img/walking.jpeg",
     description:
       "Experience a walk alongside elephants and discover the beauty of your surroundings.",
     introduction:
-      "Walking with elephants offers visitors a chance to experience the surroundings alongside these animals.",
+      "Walk with elephants at Jaipur Elephant Ride and discover the Fun with Elephants activity.",
     details:
-      "The existing Elefriendride website describes guided walks and interactions with elephants. Contact the team for current availability and visit guidance.",
+      "The idea of an elephant safari gets everyone excited. Our “Fun with Elephants” activity gives visitors an opportunity to get close to these animals, walk alongside them and interact with them. Learn more about this activity and other elephant experiences at Jaipur Elephant Ride.",
     supportingImages: [
       {
         src: "/images/gallery/contributed/img-3722.webp",
@@ -70,9 +70,9 @@ const activityDefinitions = [
   {
     id: 4,
     number: "04",
-    title: "Feeding Elephant",
+    title: "Elephant Feeding in Jaipur",
     slug: "feeding-elephant",
-    image: "/images/activities/elephant-feeding.webp",
+    image: "/images/gallery/contributed/img-1968.webp",
     description:
       "Discover the feeding experience and opportunities to interact with elephants.",
     introduction:
@@ -93,15 +93,15 @@ const activityDefinitions = [
   {
     id: 5,
     number: "05",
-    title: "Painting on Elephant",
+    title: "Elephant Painting in Jaipur",
     slug: "painting",
-    image: "/images/activities/elephant-painting.webp",
+    image: "/images/new%20img/painting.jpeg",
     description:
       "Explore the painting activity featured at Elefriendride.",
     introduction:
-      "Painting on Elephant is an activity featured on the Elefriendride website, where visitors can take part in creating a shared memory.",
+      "Learn how to create a traditional decorative design using water-based or herbal colours.",
     details:
-      "The existing website describes painting with safe, non-toxic paints. Contact Elefriendride to confirm the current activity details before visiting.",
+      "The colours used here are water-based or herbal, easy to apply and wash away, helping keep the elephant’s skin safe. Learn how to create a traditional decoration and enjoy painting a design across an elephant’s large body.",
     supportingImages: [
       {
         src: "/images/gallery/contributed/img-3727.webp",
@@ -116,7 +116,7 @@ const activityDefinitions = [
   {
     id: 6,
     number: "06",
-    title: "Bathing with Elephant",
+    title: "Elephant Bathing in Jaipur",
     slug: "bathing",
     image: "/images/activities/elephant-bathing.webp",
     description:

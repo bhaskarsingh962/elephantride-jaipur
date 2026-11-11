@@ -1,22 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageIntro from "../components/layout/PageIntro.astro";
-
-const tours = [
-  "Jaipur Sightseeing Tour",
-  "Night Tour of Jaipur",
-  "Jaipur Shopping Tour",
-  "Jaipur Food Tour",
-  "Walking Tour of Jaipur",
-  "Jaipur Village Jeep Safari",
-  "Elephant Safari in Jaipur",
-  "Jaipur Hidden Places",
-];
+import { getImageDimensions } from "../data/imageDimensions.js";
+import { sameDayTours } from "../data/sameDayTours.js";
 ---
 
 <BaseLayout
-  title="Jaipur Same Day Tours | Elefriendride"
-  description="Explore Jaipur sightseeing, food, shopping and other same day tour options listed by Elefriendride. Contact the team to ask about current availability."
+  title="Jaipur Same Day Tours | Elephant Ride Jaipur"
+  description="Explore Jaipur sightseeing, food, shopping and other same day tour options. Contact Elephant Ride Jaipur to ask about current availability."
 >
   <PageIntro
     eyebrow="EXPLORE JAIPUR"
@@ -26,11 +17,29 @@ const tours = [
 
   <section class="tours-page" aria-label="Same day tour options">
     <div class="tours-grid">
-      {tours.map((tour, index) => (
+      {sameDayTours.map((tour, index) => (
         <article class="tour-card">
-          <span class="tour-number">{String(index + 1).padStart(2, "0")}</span>
-          <h2>{tour}</h2>
-          <a href="/contact">Ask about this tour <span aria-hidden="true">→</span></a>
+          <div class="tour-image-wrap">
+            <a href={`/same-day-tours/${tour.slug}`} aria-label={`View ${tour.title} details`}>
+              <img
+                src={tour.image}
+                alt={tour.imageAlt}
+                width={getImageDimensions(tour.image).width}
+                height={getImageDimensions(tour.image).height}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <span class="tour-number">{String(index + 1).padStart(2, "0")}</span>
+          </div>
+          <div class="tour-card-content">
+            <h2><a href={`/same-day-tours/${tour.slug}`}>{tour.title}</a></h2>
+            <p>{tour.description}</p>
+            <a class="tour-details-link" href={`/same-day-tours/${tour.slug}`}>
+              View tour details <span aria-hidden="true">→</span>
+            </a>
+            <a href="/contact">Ask about this tour <span aria-hidden="true">→</span></a>
+          </div>
         </article>
       ))}
     </div>
@@ -45,30 +54,84 @@ const tours = [
 
   .tours-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
     max-width: 1280px;
     margin: auto;
   }
 
   .tour-card {
     min-width: 0;
-    padding: 30px;
     background: #f8f4eb;
+    box-shadow: 0 12px 30px rgba(36, 69, 55, 0.08);
+  }
+
+  .tour-image-wrap {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #dcc5a1;
+  }
+
+  .tour-image-wrap::after {
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(20, 39, 31, 0.38));
+    content: "";
+  }
+
+  .tour-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .tour-card:hover .tour-image-wrap img {
+    transform: scale(1.04);
+  }
+
+  .tour-card-content {
+    padding: 24px;
   }
 
   .tour-number {
+    position: absolute;
+    z-index: 1;
+    bottom: 16px;
+    left: 20px;
     color: #a64f37;
     font-size: 11px;
     letter-spacing: 2px;
   }
 
   .tour-card h2 {
-    margin: 18px 0;
+    margin: 0 0 12px;
     color: #244537;
     font-family: var(--font-heading);
     font-size: clamp(24px, 3vw, 34px);
     font-weight: 500;
+  }
+
+  .tour-card h2 a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .tour-card h2 a:hover {
+    color: #a64f37;
+  }
+
+  .tour-card p {
+    min-height: 78px;
+    margin: 0 0 20px;
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .tour-details-link {
+    margin-right: 18px;
   }
 
   .tour-card a {
@@ -94,8 +157,24 @@ const tours = [
       gap: 14px;
     }
 
-    .tour-card {
-      padding: 24px;
+    .tour-card p {
+      min-height: auto;
+    }
+  }
+
+  @media (min-width: 621px) and (max-width: 960px) {
+    .tours-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tour-card p {
+      min-height: 104px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tour-image-wrap img {
+      transition: none;
     }
   }
 </style>

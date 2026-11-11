@@ -31,7 +31,7 @@ const featuredArticleDefinitions = [
   },
   {
     number: "02",
-    category: "ELEFRIENDRIDE JOURNAL",
+    category: "ELEPHANT RIDE JAIPUR JOURNAL",
     title: "A Day of Discovery at Elefriendride",
     description:
       "Take a closer look at the destination, its surroundings and the experiences visitors can discover.",

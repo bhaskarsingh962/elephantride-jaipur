@@ -40,11 +40,11 @@ All commands are run from the root of the project, from a terminal:
 
 ## SEO deployment configuration
 
-Set the `SITE_URL` environment variable in the deployment environment to the
-confirmed production origin (for example, `https://your-confirmed-domain.com`).
-Astro uses this setting for canonical URLs, structured data, the sitemap, and
-`robots.txt`. Until the production domain is confirmed, builds use
-`https://example.com` as a safe placeholder; do not deploy that placeholder.
+The canonical production domain is `https://elephantridejaipur.com`. Astro uses
+the `SITE_URL` environment variable for canonical URLs, structured data, the
+sitemap, and `robots.txt`. The build defaults to the production domain; set
+`SITE_URL` explicitly in the deployment environment if a different origin is
+required.
 
 ## 👀 Want to learn more?
 

@@ -1,0 +1,253 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageIntro from "../../components/layout/PageIntro.astro";
+import { getImageDimensions } from "../../data/imageDimensions.js";
+import { sameDayTours } from "../../data/sameDayTours.js";
+
+export function getStaticPaths() {
+  return sameDayTours.map((tour) => ({
+    params: { slug: tour.slug },
+    props: { tour },
+  }));
+}
+
+const { tour } = Astro.props;
+const imageDimensions = getImageDimensions(tour.image);
+---
+
+<BaseLayout
+  title={`${tour.title} | Elephant Ride Jaipur`}
+  description={tour.description}
+>
+  <PageIntro
+    eyebrow="EXPLORE JAIPUR"
+    title={tour.title}
+    description={tour.description}
+    image={tour.image}
+  />
+
+  <main class="tour-detail">
+    <section class="tour-overview">
+      <div class="tour-lead">
+        <p class="tour-eyebrow">YOUR JAIPUR EXPERIENCE</p>
+        <h2>Make a day of discovering Jaipur.</h2>
+        <p>{tour.description}</p>
+      </div>
+
+      <img
+        class="tour-feature-image"
+        src={tour.image}
+        alt={tour.imageAlt}
+        width={imageDimensions.width}
+        height={imageDimensions.height}
+        loading="eager"
+        decoding="async"
+      />
+    </section>
+
+    <section class="tour-content" aria-label={`${tour.title} details`}>
+      <div class="tour-highlights">
+        <p class="tour-eyebrow">AT A GLANCE</p>
+        <h2>Tour highlights</h2>
+        <ul>
+          {tour.highlights.map((highlight) => <li>{highlight}</li>)}
+        </ul>
+      </div>
+
+      <div class="tour-sections">
+        {tour.sections.map((section) => (
+          <article class="tour-section">
+            <h3>{section.title}</h3>
+            <p>{section.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <p class="tour-note">
+        Stops, opening times and activities can change. Please contact our team
+        to confirm current availability and arrangements before your visit.
+      </p>
+
+      <div class="tour-actions">
+        <a class="tour-contact" href="/contact">
+          Plan this tour <span aria-hidden="true">↗</span>
+        </a>
+        <a class="tour-back" href="/same-day-tours">
+          Back to all same day tours <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .tour-detail {
+    background: #f8f4eb;
+  }
+
+  .tour-overview {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 64px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 90px 7%;
+  }
+
+  .tour-eyebrow {
+    margin: 0 0 18px;
+    color: #a64f37;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  .tour-lead h2,
+  .tour-highlights h2 {
+    margin: 0 0 22px;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 400;
+    line-height: 1.12;
+  }
+
+  .tour-lead > p:last-child,
+  .tour-section p,
+  .tour-note {
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .tour-feature-image {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    background: #dcc5a1;
+  }
+
+  .tour-content {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 7% 100px;
+  }
+
+  .tour-highlights {
+    padding: 36px;
+    background: #eee8dc;
+  }
+
+  .tour-highlights ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 30px;
+    margin: 0;
+    padding-left: 20px;
+    color: #706d65;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .tour-highlights li::marker {
+    color: #a64f37;
+  }
+
+  .tour-sections {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+    padding: 56px 0 18px;
+  }
+
+  .tour-section {
+    padding-top: 20px;
+    border-top: 1px solid #dcc5a1;
+  }
+
+  .tour-section h3 {
+    margin: 0 0 12px;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: 27px;
+    font-weight: 400;
+  }
+
+  .tour-section p {
+    margin: 0;
+  }
+
+  .tour-note {
+    margin: 10px 0 0;
+    font-size: 12px;
+  }
+
+  .tour-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .tour-contact,
+  .tour-back {
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .tour-contact {
+    display: inline-flex;
+    gap: 18px;
+    padding: 16px 21px;
+    background: #244537;
+    color: #f8f4eb;
+  }
+
+  .tour-back {
+    color: #a64f37;
+  }
+
+  .tour-contact:focus-visible,
+  .tour-back:focus-visible {
+    outline: 2px solid #a64f37;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 760px) {
+    .tour-overview {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 65px 6%;
+    }
+
+    .tour-feature-image {
+      height: 340px;
+    }
+
+    .tour-content {
+      padding: 0 6% 75px;
+    }
+
+    .tour-highlights {
+      padding: 26px;
+    }
+
+    .tour-highlights ul,
+    .tour-sections {
+      grid-template-columns: 1fr;
+    }
+
+    .tour-sections {
+      gap: 30px;
+      padding-top: 40px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tour-contact {
+      transition: none;
+    }
+  }
+</style>
