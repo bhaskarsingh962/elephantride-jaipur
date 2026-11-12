@@ -15,22 +15,13 @@ const logoDimensions = getImageDimensions("/elefriendride-logo.svg");
 const translationLanguages = [
   { code: "en", label: "English" },
   { code: "hi", label: "Hindi" },
-  { code: "as", label: "Assamese" },
-  { code: "bn", label: "Bengali" },
-  { code: "gu", label: "Gujarati" },
-  { code: "kn", label: "Kannada" },
-  { code: "ml", label: "Malayalam" },
-  { code: "mr", label: "Marathi" },
-  { code: "or", label: "Odia" },
-  { code: "pa", label: "Punjabi" },
-  { code: "ta", label: "Tamil" },
-  { code: "te", label: "Telugu" },
-  { code: "ur", label: "Urdu" },
   { code: "fr", label: "French" },
   { code: "es", label: "Spanish" },
   { code: "de", label: "German" },
   { code: "ru", label: "Russian" },
   { code: "ar", label: "Arabic" },
+  { code: "zh-CN", label: "Chinese" },
+  { code: "ja", label: "Japanese" },
 ];
 
 const includedLanguages = translationLanguages
@@ -190,7 +181,7 @@ export default function Navbar({ currentPath }) {
           <a
             href="/"
             className="navbar-brand"
-            aria-label="Elephant Ride Jaipur homepage"
+            aria-label="Jaipur Elephant Ride homepage"
             onClick={closeMenu}
           >
             <img
@@ -202,7 +193,7 @@ export default function Navbar({ currentPath }) {
             />
             <span className="brand-copy">
               <span className="brand-name">
-                ELEPHANT RIDE JAIPUR
+                JAIPUR ELEPHANT RIDE
               </span>
 
               <span className="brand-location">
@@ -311,7 +302,7 @@ export default function Navbar({ currentPath }) {
         <div className="mobile-navigation-inner">
 
           <div className="mobile-menu-heading">
-            <span>EXPLORE ELEPHANT RIDE JAIPUR</span>
+            <span>EXPLORE JAIPUR ELEPHANT RIDE</span>
             <span>JAIPUR · INDIA</span>
           </div>
 
@@ -348,7 +339,7 @@ export default function Navbar({ currentPath }) {
           </a>
 
           <div className="mobile-menu-footer">
-            <span>ELEPHANT RIDE JAIPUR</span>
+            <span>JAIPUR ELEPHANT RIDE</span>
             <span>AN EXPERIENCE IN RAJASTHAN</span>
           </div>
 

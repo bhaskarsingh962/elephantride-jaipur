@@ -35,8 +35,8 @@ const sameDayTourDefinitions = [
     title: "Night Tour of Jaipur",
     description:
       "Take in illuminated landmarks and hilltop views after sunset. Ask our team about current routes and availability.",
-    image: "/images/blog/source/jaipur-night-jeep-safari-card.webp",
-    imageAlt: "Jaipur and Amber Fort illuminated at night during a jeep tour",
+    image: "/images/new%20img/night pic jaipur.jpeg",
+    imageAlt: "Jaipur's illuminated palace at night",
     sections: [
       {
         title: "Nahargarh after sunset",
@@ -159,8 +159,8 @@ const sameDayTourDefinitions = [
     title: "Jaipur Village Jeep Safari",
     description:
       "Explore the landscape around Jaipur on a jeep safari. Routes and arrangements depend on availability.",
-    image: "/images/blog/source/jhalana-leopard-safari-jaipur-card.webp",
-    imageAlt: "A jeep safari in the hills near Jaipur",
+    image: "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.33 AM.jpeg",
+    imageAlt: "A hillside fort and landscape near Jaipur",
     sections: [
       {
         title: "See the countryside around Amer",

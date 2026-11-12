@@ -27,14 +27,14 @@ const { page, articles } = Astro.props;
 ---
 
 <BaseLayout
-  title={`Jaipur Travel Journal - Page ${page} | Elephant Ride Jaipur`}
-  description={`Browse page ${page} of the Elephant Ride Jaipur travel journal, with visitor guides and information about elephant experiences in Rajasthan.`}
+  title={`Jaipur Travel Journal - Page ${page} | Jaipur Elephant Ride`}
+  description={`Browse page ${page} of the Jaipur Elephant Ride travel journal, with visitor guides and information about elephant experiences in Rajasthan.`}
 >
   <PageIntro
-    eyebrow="THE ELEPHANT RIDE JAIPUR JOURNAL"
+    eyebrow="THE JAIPUR ELEPHANT RIDE JOURNAL"
     title="Stories & Inspiration"
     description="Explore Jaipur travel inspiration, elephant experiences and helpful ideas for planning your visit."
-    image="/images/blog/blog-elephants.webp"
+    image={page === 2 ? "/images/new%20img/night pic jaipur.jpeg" : "/images/blog/blog-elephants.webp"}
   />
   <BlogArticleGrid articles={articles} currentPage={page} totalPages={pageCount} />
 </BaseLayout>

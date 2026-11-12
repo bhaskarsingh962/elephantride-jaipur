@@ -13,38 +13,38 @@ export function getStaticPaths() {
 
 const { activity } = Astro.props;
 const metaTitles = {
-  "elephant-meeting": "Elephant Meeting in Jaipur | Elephant Ride Jaipur",
-  "elephant-ride": "Elephant Ride in Jaipur | Elephant Ride Jaipur",
-  "walking-with-elephants": "Walking with Elephants in Jaipur | Elephant Ride Jaipur",
-  "feeding-elephant": "Elephant Feeding in Jaipur | Elephant Ride Jaipur",
-  painting: "Elephant Painting in Jaipur | Elephant Ride Jaipur",
-  bathing: "Elephant Bathing in Jaipur | Elephant Ride Jaipur",
+  "elephant-meeting": "Elephant Meeting in Jaipur | Jaipur Elephant Ride",
+  "elephant-ride": "Elephant Ride in Jaipur | Jaipur Elephant Ride",
+  "walking-with-elephants": "Walking with Elephants in Jaipur | Jaipur Elephant Ride",
+  "feeding-elephant": "Elephant Feeding in Jaipur | Jaipur Elephant Ride",
+  painting: "Elephant Painting in Jaipur | Jaipur Elephant Ride",
+  bathing: "Elephant Bathing in Jaipur | Jaipur Elephant Ride",
 };
 const metaDescriptions = {
   "elephant-meeting":
-    "Learn about elephant encounters in Jaipur. Contact Elephant Ride Jaipur to ask about current arrangements and visitor details.",
+    "Learn about elephant encounters in Jaipur. Contact Jaipur Elephant Ride to ask about current arrangements and visitor details.",
   "elephant-ride":
-    "Explore the elephant ride experience in Jaipur. Contact Elephant Ride Jaipur to confirm availability and visit details.",
+    "Explore the elephant ride experience in Jaipur. Contact Jaipur Elephant Ride to confirm availability and visit details.",
   "walking-with-elephants":
-    "Discover walking with elephants in Jaipur. Ask Elephant Ride Jaipur about current arrangements and visitor guidance.",
+    "Discover walking with elephants in Jaipur. Ask Jaipur Elephant Ride about current arrangements and visitor guidance.",
   "feeding-elephant":
-    "Learn about elephant feeding in Jaipur. Contact Elephant Ride Jaipur to confirm current availability and visitor guidance.",
+    "Learn about elephant feeding in Jaipur. Contact Jaipur Elephant Ride to confirm current availability and visitor guidance.",
   painting:
-    "Explore elephant painting in Jaipur. Contact Elephant Ride Jaipur for current activity details.",
+    "Explore elephant painting in Jaipur. Contact Jaipur Elephant Ride for current activity details.",
   bathing:
-    "Learn about elephant bathing in Jaipur. Ask Elephant Ride Jaipur about current arrangements before visiting.",
+    "Learn about elephant bathing in Jaipur. Ask Jaipur Elephant Ride about current arrangements before visiting.",
 };
 const enquiry = encodeURIComponent(
-  `Hello Elephant Ride Jaipur, I would like to enquire about ${activity.title}. Please share the current availability and visit details.`
+  `Hello Jaipur Elephant Ride, I would like to enquire about ${activity.title}. Please share the current availability and visit details.`
 );
 ---
 
 <BaseLayout
-  title={metaTitles[activity.slug] ?? `${activity.title} in Jaipur | Elephant Ride Jaipur`}
+  title={metaTitles[activity.slug] ?? `${activity.title} in Jaipur | Jaipur Elephant Ride`}
   description={metaDescriptions[activity.slug] ?? activity.description}
 >
   <PageIntro
-    eyebrow="ELEPHANT RIDE JAIPUR EXPERIENCE"
+    eyebrow="JAIPUR ELEPHANT RIDE EXPERIENCE"
     title={activity.title}
     description={activity.introduction}
     image={activity.image}
@@ -60,7 +60,7 @@ const enquiry = encodeURIComponent(
         <p>{activity.details}</p>
         <p>
           Experience availability and arrangements can change. Contact
-          Elephant Ride Jaipur to confirm details before your visit.
+          Jaipur Elephant Ride to confirm details before your visit.
         </p>
         <div class="activity-actions">
           <a

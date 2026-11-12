@@ -5,7 +5,7 @@ const activityDefinitions = [
   {
     id: 1,
     number: "01",
-    title: "Elephant Meeting in Jaipur",
+    title: "Jaipur Elephant Meeting",
     slug: "elephant-meeting",
     image: "/images/activities/elephant-meeting.webp",
     description:
@@ -24,7 +24,7 @@ const activityDefinitions = [
   {
     id: 2,
     number: "02",
-    title: "Elephant Ride in Jaipur",
+    title: "Jaipur Elephant Ride",
     slug: "elephant-ride",
     image: "/images/activities/elephant-ride.webp",
     description:
@@ -47,7 +47,7 @@ const activityDefinitions = [
   {
     id: 3,
     number: "03",
-    title: "Walking with Elephants in Jaipur",
+    title: "Jaipur Elephant Walking",
     slug: "walking-with-elephants",
     image: "/images/new%20img/walking.jpeg",
     description:
@@ -70,7 +70,7 @@ const activityDefinitions = [
   {
     id: 4,
     number: "04",
-    title: "Elephant Feeding in Jaipur",
+    title: "Jaipur Elephant Feeding",
     slug: "feeding-elephant",
     image: "/images/gallery/contributed/img-1968.webp",
     description:
@@ -93,7 +93,7 @@ const activityDefinitions = [
   {
     id: 5,
     number: "05",
-    title: "Elephant Painting in Jaipur",
+    title: "Jaipur Elephant Painting",
     slug: "painting",
     image: "/images/new%20img/painting.jpeg",
     description:
@@ -116,7 +116,7 @@ const activityDefinitions = [
   {
     id: 6,
     number: "06",
-    title: "Elephant Bathing in Jaipur",
+    title: "Jaipur Elephant Bathing",
     slug: "bathing",
     image: "/images/activities/elephant-bathing.webp",
     description:

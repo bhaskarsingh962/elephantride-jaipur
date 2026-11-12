@@ -1,40 +1,40 @@
 import { getImageDimensions } from "./imageDimensions.js";
 
 const sourceArticles = [
-  ["elephant-sanctuary-day-trip-from-delhi", "Elephant Sanctuary Day Trip from Delhi: How to Plan It", "2026-11-03", "elephant-sanctuary-day-trip-from-delhi-card.webp"],
-  ["christmas-in-india-golden-triangle", "Christmas in India: A Golden Triangle Holiday Plan", "2026-11-02", "christmas-in-india-golden-triangle-card.webp"],
-  ["things-to-know-before-elephant-ride-jaipur", "Things to Know Before an Elephant Ride in Jaipur", "2026-11-01", "things-to-know-before-elephant-ride-jaipur-card.webp"],
-  ["taj-mahal-day-trip-from-jaipur", "Taj Mahal Day Trip from Jaipur: Is It Worth It?", "2026-10-24", "/images/gallery/contributed/img-3125.webp"],
-  ["how-much-does-an-elephant-weigh", "How Much Does an Elephant Weigh? Asian Elephant Facts", "2026-10-23", "how-much-does-an-elephant-weigh-card.webp"],
-  ["ranthambore-tiger-safari-from-jaipur", "Ranthambore Tiger Safari from Jaipur: A Complete Guide", "2026-10-22", "ranthambore-tiger-safari-from-jaipur-card.webp"],
-  ["what-to-expect-at-elephant-sanctuary", "What to Expect at an Elephant Sanctuary in Jaipur", "2026-10-21", "what-to-expect-at-elephant-sanctuary-card.webp"],
+  ["elephant-sanctuary-day-trip-from-delhi", "Elephant Sanctuary Day Trip from Delhi: How to Plan It", "2026-11-03", "/images/new%20img/walking.jpeg"],
+  ["christmas-in-india-golden-triangle", "Christmas in India: A Golden Triangle Holiday Plan", "2026-11-02", "/images/new%20img/WhatsApp Image 2026-11-12 at 11.10.19 PM.jpeg"],
+  ["things-to-know-before-elephant-ride-jaipur", "Things to Know Before an Elephant Ride in Jaipur", "2026-11-01", "/images/new%20img/painting.jpeg"],
+  ["taj-mahal-day-trip-from-jaipur", "Taj Mahal Day Trip from Jaipur: Is It Worth It?", "2026-10-24", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.31 AM.jpeg"],
+  ["how-much-does-an-elephant-weigh", "How Much Does an Elephant Weigh? Asian Elephant Facts", "2026-10-23", "/images/new%20img/walking.jpeg"],
+  ["ranthambore-tiger-safari-from-jaipur", "Ranthambore Tiger Safari from Jaipur: A Complete Guide", "2026-10-22", "/images/new%20img/water home.jpeg"],
+  ["what-to-expect-at-elephant-sanctuary", "What to Expect at an Elephant Sanctuary in Jaipur", "2026-10-21", "/images/new%20img/painting.jpeg"],
   ["jaipur-2-day-itinerary", "Jaipur 2-Day Itinerary: Forts, Elephants and Night", "2026-10-20", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.32 AM.jpeg"],
-  ["private-tour-guide-jaipur", "Private Tour Guide in Jaipur: Is It Worth It?", "2026-10-19", "private-tour-guide-jaipur-card.webp"],
-  ["elephant-ride-with-kids-jaipur", "Elephant Ride with Kids in Jaipur: Age, Safety and Tips", "2026-10-18", "elephant-ride-with-kids-jaipur-card.webp"],
-  ["jhalana-leopard-safari-jaipur", "Jhalana Leopard Safari Jaipur: Zones, Timings and Tips", "2026-10-17", "jhalana-leopard-safari-jaipur-card.webp"],
-  ["elephant-safari-vs-elephant-ride", "Elephant Safari vs Elephant Ride: Which Should You Choose", "2026-10-16", "elephant-safari-vs-elephant-ride-card.webp"],
-  ["jaipur-night-jeep-safari", "Jaipur Night Jeep Safari: What to Expect After Dark", "2026-10-15", "/images/gallery/contributed/img-1511.webp"],
-  ["best-time-for-elephant-ride", "Best Time for an Elephant Ride: Morning Hours by Season", "2026-10-14", "/images/gallery/contributed/img-3783.webp"],
+  ["private-tour-guide-jaipur", "Private Tour Guide in Jaipur: Is It Worth It?", "2026-10-19", "/images/new%20img/WhatsApp Image 2026-11-12 at .jpeg"],
+  ["elephant-ride-with-kids-jaipur", "Elephant Ride with Kids in Jaipur: Age, Safety and Tips", "2026-10-18", "/images/new%20img/walking.jpeg"],
+  ["jhalana-leopard-safari-jaipur", "Jhalana Leopard Safari Jaipur: Zones, Timings and Tips", "2026-10-17", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.33 AM.jpeg"],
+  ["elephant-safari-vs-elephant-ride", "Elephant Safari vs Elephant Ride: Which Should You Choose", "2026-10-16", "/images/new%20img/mahal jaipur.jpeg"],
+  ["jaipur-night-jeep-safari", "Jaipur Night Jeep Safari: What to Expect After Dark", "2026-10-15", "/images/new%20img/night pic jaipur.jpeg"],
+  ["best-time-for-elephant-ride", "Best Time for an Elephant Ride: Morning Hours by Season", "2026-10-14", "/images/new%20img/walking.jpeg"],
   ["golden-triangle-itinerary", "Golden Triangle Itinerary: 3 Days vs 5 Days in India", "2026-10-13", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.33 AM.jpeg"],
-  ["how-long-do-elephants-live", "How Long Do Elephants Live? Asian Elephant Lifespan", "2026-10-12", "how-long-do-elephants-live-card.webp"],
-  ["rajasthan-festivals-in-november", "Rajasthan Festivals in November: A Traveller's Guide", "2026-10-11", "rajasthan-festivals-in-november-card.webp"],
-  ["elephant-sanctuary-with-kids", "Elephant Sanctuary with Kids: A Jaipur Family Guide", "2026-10-10", "elephant-sanctuary-with-kids-card.webp"],
-  ["best-time-to-visit-jaipur", "Best Time to Visit Jaipur: Month-by-Month Guide", "2026-10-09", "best-time-to-visit-jaipur-card.webp"],
-  ["elephant-ride-or-jeep-amber-fort", "Elephant Ride or Jeep to Amber Fort? How to Choose", "2026-10-08", "elephant-ride-or-jeep-amber-fort-card.webp"],
-  ["delhi-to-jaipur", "Delhi to Jaipur: Train, Car or Flight? Times and Tips", "2026-10-07", "delhi-to-jaipur-card.webp"],
-  ["what-do-elephants-eat", "What Do Elephants Eat? A Jaipur Sanctuary's Daily Diet", "2026-10-06", "what-do-elephants-eat-card.webp"],
-  ["pushkar-camel-fair", "Pushkar Camel Fair 2026: Dates and How to Go from Jaipur", "2026-10-05", "pushkar-camel-fair-card.webp"],
-  ["how-to-choose-an-elephant-sanctuary", "How to Choose an Elephant Sanctuary: 7 Questions to Ask", "2026-10-04", "how-to-choose-an-elephant-sanctuary-card.webp"],
+  ["how-long-do-elephants-live", "How Long Do Elephants Live? Asian Elephant Lifespan", "2026-10-12", "/images/new%20img/painting.jpeg"],
+  ["rajasthan-festivals-in-november", "Rajasthan Festivals in November: A Traveller's Guide", "2026-10-11", "/images/new%20img/shoping jaipur.jpeg"],
+  ["elephant-sanctuary-with-kids", "Elephant Sanctuary with Kids: A Jaipur Family Guide", "2026-10-10", "/images/new%20img/painting.jpeg"],
+  ["best-time-to-visit-jaipur", "Best Time to Visit Jaipur: Month-by-Month Guide", "2026-10-09", "/images/new%20img/mahal jaipur day.jpeg"],
+  ["elephant-ride-or-jeep-amber-fort", "Elephant Ride or Jeep to Amber Fort? How to Choose", "2026-10-08", "/images/new%20img/WhatsApp Image 2026-11-12 at 11.10.17 PM.jpeg"],
+  ["delhi-to-jaipur", "Delhi to Jaipur: Train, Car or Flight? Times and Tips", "2026-10-07", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.32 AM.jpeg"],
+  ["what-do-elephants-eat", "What Do Elephants Eat? A Jaipur Sanctuary's Daily Diet", "2026-10-06", "/images/new%20img/walking.jpeg"],
+  ["pushkar-camel-fair", "Pushkar Camel Fair 2026: Dates and How to Go from Jaipur", "2026-10-05", "/images/new%20img/WhatsApp Image 2026-11-12 at 12.16.32 A.jpeg"],
+  ["how-to-choose-an-elephant-sanctuary", "How to Choose an Elephant Sanctuary: 7 Questions to Ask", "2026-10-04", "/images/new%20img/painting.jpeg"],
   ["diwali-in-jaipur", "Diwali in Jaipur 2026: Lights, Bazaars and Travel Tips", "2026-10-03", "/images/gallery/contributed/img-0532.webp"],
   ["what-to-wear-to-elephant-sanctuary-jaipur", "What to Wear to an Elephant Sanctuary in Jaipur", "2026-10-02", "/images/gallery/contributed/img-2989.webp"],
   ["jaipur-weather-october-november", "Jaipur Weather in October and November: What to Pack", "2026-10-01", "elephant-sanctuary-tours-in-jaipur-for-usa.webp"],
   ["things-to-do-in-amer-jaipur", "Things to Do in Amer, Jaipur: 12 Places Locals Actually Go", "2026-09-18", "/images/gallery/contributed/img-3781.webp"],
   ["elephant-riding-jaipur-ethical", "Elephant Riding in Jaipur Ethical? An Honest Answer", "2026-09-16", "elephant-village-in-jaipur.webp"],
   ["jaipur-in-one-day-itinerary", "Jaipur in One Day - A Local's Itinerary", "2026-09-15", "/images/gallery/contributed/img-3116.webp"],
-  ["elephant-ride-jaipur-price", "Elephant Ride Jaipur Price 2026", "2026-09-14", "/images/gallery/contributed/img-3724.webp"],
+  ["elephant-ride-jaipur-price", "Jaipur Elephant Ride Price 2026", "2026-09-14", "/images/gallery/contributed/img-3724.webp"],
   ["best-time-to-visit-elephant-sanctuary-jaipur", "Best Time to Visit Elephant Sanctuary Jaipur - What Nobody Tells You", "2026-09-11", "/images/gallery/contributed/img-2704.webp"],
   ["guided-elephant-tours-in-jaipur", "Guided Elephant Tours in Jaipur | Private Elephant Safari", "2026-03-12", "/images/gallery/contributed/img-3722.webp"],
-  ["royal-elephant-ride-at-amber-palace", "Amber Palace Elephant Rides | Royal Elephant Ride Jaipur", "2026-03-09", "a-unique-experience-for-uk-tourists.webp"],
+  ["royal-elephant-ride-at-amber-palace", "Amber Palace Elephant Rides | Royal Jaipur Elephant Ride", "2026-03-09", "a-unique-experience-for-uk-tourists.webp"],
   ["star-tour-tourism", "Star Tour Tourism | Private India Tours & Golden Triangle Specialists", "2026-02-27", "/images/gallery/contributed/img-3114.webp"],
   ["jaipur-elephant-sanctuary-elefriendride", "Jaipur Elephant Sanctuary | Ethical Tours Jaipur", "2026-01-14", "/images/gallery/contributed/img-3726.webp"],
   ["jaipur-elephant-experience-elefriendride-sanctuary", "Jaipur Elephant Experience and Sanctuary", "2025-12-11", "/images/gallery/contributed/img-2987.webp"],
@@ -65,7 +65,7 @@ const sourceArticles = [
   ["elephant-shower-in-jaipur", "Elephant Shower in Jaipur: Fun, Refreshing, and Ethical", "2024-10-17", "elephant-shower-in-jaipu.webp"],
   ["elephant-bathing-in-jaipur", "Elephant Bathing in Jaipur | A Refreshing and Unforgettable Experience", "2024-10-17", "elephant-bathing-in-jaipur.webp"],
   ["elephant-feeding-in-jaipur", "Explore Elephant Feeding in Jaipur | A Unique and Ethical Experience", "2024-10-17", "elephant-feeding-in-jaipur.webp"],
-  ["elephant-ride-jaipur", "Elephant Ride Jaipur: A Unique Way to Experience Amber Fort's Grandeur", "2024-10-16", "elephant-ride-jaipur.webp"],
+  ["elephant-ride-jaipur", "Jaipur Elephant Ride: A Unique Way to Experience Amber Fort's Grandeur", "2024-10-16", "elephant-ride-jaipur.webp"],
   ["book-elephant-safari-in-jaipur", "Top 5 Reasons to Book an Elephant Safari in Jaipur", "2024-10-16", "book-elephant-safari-in-jaipur.webp"],
   ["elephant-sanctuary-india", "Elephant Sanctuary India: Supporting Wildlife Conservation and Ethical Tourism", "2024-10-16", "elephant-sanctuary-india.webp"],
   ["elephant-sanctuary-jaipur", "Elephant Sanctuary Jaipur: Experience Ethical Elephant Tourism", "2024-10-15", "elephant-sanctuary-jaipur-experience-ethical-elephant-tourism.webp"],
@@ -293,7 +293,7 @@ const topicContent = {
     ],
   },
   experiences: {
-    category: "ELEPHANT RIDE JAIPUR EXPERIENCES",
+    category: "JAIPUR ELEPHANT RIDE EXPERIENCES",
     image: "/images/blog/blog-elephants.webp",
     description:
       "A visitor guide to TITLE with useful questions to ask and information to confirm before planning.",
@@ -325,19 +325,141 @@ const topicContent = {
   },
 };
 
+const articleContentOverrides = {
+  "rajasthan-festivals-in-november": {
+    category: "RAJASTHAN FESTIVALS",
+    description:
+      "Plan a November trip around Rajasthan's seasonal fairs and celebrations, and confirm dates and local arrangements before travel.",
+    introduction:
+      "November can bring lively festivals to Rajasthan, but dates follow local calendars and change each year. Use this overview to plan flexible travel and verify event timings before setting out.",
+    sections: [
+      {
+        heading: "Check festival dates",
+        paragraphs: [
+          "The Pushkar Camel Fair is commonly held around October or November, with dates tied to the Hindu lunar calendar. Diwali can also fall in October or November. Confirm the exact dates, venues and local arrangements for your travel year.",
+          "Do not rely on a previous year's schedule when booking transport or accommodation. Check announcements from official tourism and event sources close to your visit.",
+        ],
+      },
+      {
+        heading: "Plan for busy travel days",
+        paragraphs: [
+          "Popular events can bring larger crowds and slower journeys. Leave extra time for local transport, choose accommodation early if your dates overlap with a major fair, and keep a flexible itinerary.",
+          "Jaipur's forts, palaces and markets can complement a wider Rajasthan trip. Check current opening hours and travel conditions before visiting each place.",
+        ],
+      },
+    ],
+  },
+  "elephant-sanctuary-with-kids": {
+    category: "FAMILY VISITOR GUIDE",
+    description:
+      "Prepare for an elephant sanctuary visit with children by checking supervision, age guidance, facilities and current activity arrangements.",
+    introduction:
+      "A family visit is easier to plan when everyone knows what to expect. Ask the venue about supervision, age guidance, facilities and the activities available on your chosen date before travelling.",
+    sections: [
+      {
+        heading: "Confirm the visit details",
+        paragraphs: [
+          "Ask which activities are available, how long they take and what staff guidance children will receive. Check any age or participation rules directly with the venue rather than assuming they are the same everywhere.",
+          "If you need accessible paths, shade or regular breaks, ask about those arrangements in advance so you can decide whether the visit suits your family.",
+        ],
+      },
+      {
+        heading: "Help children prepare",
+        paragraphs: [
+          "Explain that elephants are large animals and that children should stay with their accompanying adult and follow staff directions. Do not approach, touch or feed an elephant unless the team explicitly guides that activity.",
+          "Choose comfortable footwear, bring sun protection and water, and allow time for travel and breaks. Follow the venue's current visitor guidance throughout the visit.",
+        ],
+      },
+    ],
+  },
+  "best-time-to-visit-jaipur": {
+    category: "JAIPUR TRAVEL GUIDE",
+    description:
+      "Compare Jaipur's seasonal weather and crowds to choose travel dates that fit your sightseeing plans and comfort.",
+    introduction:
+      "Jaipur's weather changes through the year, so the best time to visit depends on your comfort, plans and preferred pace. Use seasonal patterns as a guide and check a current forecast before travelling.",
+    sections: [
+      {
+        heading: "Cooler months for outdoor sightseeing",
+        paragraphs: [
+          "From around October through March, daytime weather is generally more comfortable for outdoor sightseeing, although evenings and winter mornings can feel cool. Popular dates may be busier, so book transport and accommodation early.",
+          "Check local opening hours and event schedules for your dates, as these can change independently of the season.",
+        ],
+      },
+      {
+        heading: "Plan around summer heat",
+        paragraphs: [
+          "April through June can be very hot in Rajasthan. If you travel during this period, plan outdoor stops earlier in the day, take breaks in shaded or indoor places and carry drinking water.",
+          "The monsoon season can bring rain and humidity. Keep plans flexible and check current weather and road conditions before setting out.",
+        ],
+      },
+    ],
+  },
+  "elephant-ride-or-jeep-amber-fort": {
+    category: "AMBER FORT VISITOR GUIDE",
+    description:
+      "Compare transport to Amber Fort with a separate elephant experience, and verify current access, routes and arrangements before booking.",
+    introduction:
+      "A trip to Amber Fort and an elephant activity are different parts of a Jaipur visit. Compare the practical transport options with any separate animal experience, and confirm current details before you travel.",
+    sections: [
+      {
+        heading: "Plan transport to Amber Fort",
+        paragraphs: [
+          "Amber Fort is a hilltop heritage site. Check current visitor information for opening times, entry requirements and transport access; a road transfer may be a more direct option for visitors with limited time or mobility needs.",
+          "Allow extra time for traffic and queues, especially during busy periods, and follow the site's current directions when you arrive.",
+        ],
+      },
+      {
+        heading: "Ask what an elephant experience includes",
+        paragraphs: [
+          "Do not assume an elephant activity is a way to travel to or enter the fort. Confirm its operating location, route, duration, cost and availability with the provider for your exact date.",
+          "Before choosing any animal experience, ask about visitor instructions, animal-care practices and applicable local rules. Verify details with the provider and relevant official sources rather than relying on an old listing.",
+        ],
+      },
+    ],
+  },
+  "how-much-does-an-elephant-weigh": {
+    category: "ASIAN ELEPHANT FACTS",
+    description:
+      "Learn how much Asian elephants can weigh, why body size varies, and how to interpret broad published weight ranges.",
+    introduction:
+      "There is no single weight for an Asian elephant. Age, sex and individual build all matter, so published ranges are useful for general context rather than for estimating a particular animal.",
+    sections: [
+      {
+        heading: "A broad weight range",
+        paragraphs: [
+          "National Geographic's Asian elephant profile gives a broad weight range of about 2.25 to 5.5 tons. The range covers animals of different ages and body sizes; it is not the expected weight of every elephant.",
+          "Adult males are generally larger than adult females, while calves weigh much less than adults. Individual measurements vary, and a visual estimate is not a reliable way to determine an elephant's weight.",
+        ],
+      },
+      {
+        heading: "Why weight estimates vary",
+        paragraphs: [
+          "Age, sex, height, body condition and the way a measurement is taken can all affect a reported figure. Sources may also use different units, so check the unit and the population being described before comparing numbers.",
+          "For a specific elephant, rely on measurements from qualified caretakers or veterinarians. General species facts should not be used to assess an individual animal's health.",
+        ],
+      },
+    ],
+  },
+};
+
 function createArticle([slug, title, publishedAt, cardImage], index) {
   const topic = topicContent[getTopic(slug)];
+  const content = articleContentOverrides[slug] ?? topic;
   const resolvedCardImage = cardImage
     ? cardImage.startsWith("/")
       ? cardImage
       : `/images/blog/source/${cardImage}`
     : null;
-  const fullDescription = topic.description.replaceAll("TITLE", title);
+  const articleImage = resolvedCardImage?.startsWith("/images/new%20img/")
+    ? resolvedCardImage
+    : topic.image;
+  const fullDescription = content.description.replaceAll("TITLE", title);
   const description =
     fullDescription.length <= 160
       ? fullDescription
       : `${fullDescription.slice(0, 157).replace(/\s+\S*$/, "").replace(/[,.!?;:]+$/, "")}…`;
-  const sections = topic.sections.map((section) => ({
+  const sections = content.sections.map((section) => ({
     heading: section.heading,
     paragraphs: section.paragraphs.map((paragraph) =>
       paragraph.replaceAll("TITLE", title)
@@ -346,18 +468,18 @@ function createArticle([slug, title, publishedAt, cardImage], index) {
 
   return {
     number: String(index + 6).padStart(2, "0"),
-    category: topic.category,
+    category: content.category,
     title,
     slug,
-    image: topic.image,
-    imageDimensions: getImageDimensions(topic.image),
+    image: articleImage,
+    imageDimensions: getImageDimensions(articleImage),
     cardImage: resolvedCardImage,
     cardImageDimensions: resolvedCardImage
       ? getImageDimensions(resolvedCardImage)
       : null,
     publishedAt,
     description,
-    introduction: topic.introduction.replaceAll("TITLE", title),
+    introduction: content.introduction.replaceAll("TITLE", title),
     sections,
   };
 }

@@ -1,7 +1,7 @@
 export const siteConfig = {
-  name: "Elephant Ride Jaipur",
+  name: "Jaipur Elephant Ride",
 
-  tagline: "Elephant Rides and Experiences in Jaipur",
+  tagline: "Jaipur Elephant Rides and Walking Experiences",
 
   phone: "+919521228600",
 
@@ -13,28 +13,37 @@ export const siteConfig = {
 
   email: "fardeenkhan06032004@gmail.com",
 
-  address:
-    "Elephant fans, 51, Amer Rd, Ramgarhmode, Govindpuri West, Jaipur, Jaipur Nagar Nigam Area, Rajasthan 302002",
+  officeAddress:
+    "306, Bheso Walo Ka Mohalla, Moti Katla School, Subhash Chowk, Jaipur, Rajasthan 302002",
+
+  farmAddress:
+    "CISF Rd, Delhi Highway, Kunda, Amer, Jaipur, Rajasthan 302028",
 
   structuredAddress: {
-    streetAddress: "Elephant Fans, 51, Amer Rd, Ramgarhmode, Govindpuri West",
+    streetAddress: "CISF Rd, Delhi Highway, Kunda, Amer",
     addressLocality: "Jaipur",
     addressRegion: "Rajasthan",
-    postalCode: "302002",
+    postalCode: "302028",
     addressCountry: "IN",
   },
 
-  whatsapp: "919521228600",
+  whatsapp: "916376163080",
 
   instagram: "https://www.instagram.com/elefriendride",
 
   youtube:
     "https://www.youtube.com/channel/UCCkPVa6fq-QrqeTelRc9fXw/featured",
 
-  mapsUrl:
+  officeMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(
-      "Elephant fans, 51, Amer Rd, Ramgarhmode, Govindpuri West, Jaipur, Jaipur Nagar Nigam Area, Rajasthan 302002"
+      "306, Bheso Walo Ka Mohalla, Moti Katla School, Subhash Chowk, Jaipur, Rajasthan 302002"
+    ),
+
+  farmMapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=" +
+    encodeURIComponent(
+      "CISF Rd, Delhi Highway, Kunda, Amer, Jaipur, Rajasthan 302028"
     ),
 
   navigation: [
