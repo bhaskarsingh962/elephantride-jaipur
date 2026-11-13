@@ -14,6 +14,7 @@ const {
   type = "website",
   preloadImage,
   structuredData,
+  robots = "index, follow, max-image-preview:large",
 } = Astro.props;
 
 if (!Astro.site) {
@@ -81,7 +82,7 @@ const businessStructuredData = {
       name="keywords"
       content="elephant ride Jaipur, elephant safari Jaipur, elephant activities Jaipur, walking with elephants in Jaipur"
     />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content={robots} />
     <meta name="theme-color" content="#244537" />
 
     <link rel="canonical" href={canonicalUrl} />

@@ -14,16 +14,16 @@ export const siteConfig = {
   email: "fardeenkhan06032004@gmail.com",
 
   officeAddress:
-    "306, Bheso Walo Ka Mohalla, Moti Katla School, Subhash Chowk, Jaipur, Rajasthan 302002",
+    "51, Amer Rd, Ramgarhmode, Govindpuri West, Jaipur, Jaipur Nagar Nigam Area, Rajasthan 302002",
 
   farmAddress:
     "CISF Rd, Delhi Highway, Kunda, Amer, Jaipur, Rajasthan 302028",
 
   structuredAddress: {
-    streetAddress: "CISF Rd, Delhi Highway, Kunda, Amer",
+    streetAddress: "51, Amer Rd, Ramgarhmode, Govindpuri West",
     addressLocality: "Jaipur",
     addressRegion: "Rajasthan",
-    postalCode: "302028",
+    postalCode: "302002",
     addressCountry: "IN",
   },
 
@@ -37,7 +37,7 @@ export const siteConfig = {
   officeMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(
-      "306, Bheso Walo Ka Mohalla, Moti Katla School, Subhash Chowk, Jaipur, Rajasthan 302002"
+      "51, Amer Rd, Ramgarhmode, Govindpuri West, Jaipur, Jaipur Nagar Nigam Area, Rajasthan 302002"
     ),
 
   farmMapsUrl:

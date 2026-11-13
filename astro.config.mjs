@@ -4,7 +4,7 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
-const siteUrl = (process.env.SITE_URL || "https://elephantridejaipur.com").replace(/\/+$/, "");
+const siteUrl = (process.env.SITE_URL || "https://jaipurelephantride.com").replace(/\/+$/, "");
 
 export default defineConfig({
   site: siteUrl,

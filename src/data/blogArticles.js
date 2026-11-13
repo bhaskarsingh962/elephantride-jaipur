@@ -77,7 +77,7 @@ const featuredArticleDefinitions = [
       {
         heading: "Keep the practical details handy",
         paragraphs: [
-          "Jaipur Elephant Ride has an office at 306, Bheso Walo Ka Mohalla, Moti Katla School, Subhash Chowk, Jaipur, Rajasthan 302002, and a farm at CISF Rd, Delhi Highway, Kunda, Amer, Jaipur, Rajasthan 302028. The contact page includes directions to both locations and a map of the farm.",
+          "Jaipur Elephant Ride has an office at 51, Amer Rd, Ramgarhmode, Govindpuri West, Jaipur, Jaipur Nagar Nigam Area, Rajasthan 302002, and a farm at CISF Rd, Delhi Highway, Kunda, Amer, Jaipur, Rajasthan 302028. The contact page includes directions to both locations and a map of the farm.",
           "You can call, email or send an enquiry through WhatsApp. The enquiry form opens a message in WhatsApp for you to review and send; it does not store a booking or confirm a reservation.",
         ],
       },

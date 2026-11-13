@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | Jaipur Elephant Ride"
+  description="The page you were looking for could not be found. Explore Jaipur Elephant Ride experiences, sanctuary, and contact information."
+  robots="noindex, nofollow"
+>
+  <section class="not-found">
+    <p class="eyebrow">404</p>
+    <h1>Page not found</h1>
+    <p>
+      The page you were looking for may have moved or no longer exists. Please
+      return to the Jaipur Elephant Ride homepage or explore our elephant
+      experiences in Jaipur.
+    </p>
+
+    <div class="not-found-actions">
+      <a href="/" class="primary-link">Back to home</a>
+      <a href="/experiences" class="secondary-link">View experiences</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 120px 7% 140px;
+    text-align: center;
+  }
+
+  .eyebrow {
+    color: #a64f37;
+    letter-spacing: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    margin: 0;
+    color: #244537;
+    font-family: var(--font-heading);
+    font-size: clamp(42px, 5vw, 72px);
+    font-weight: 500;
+    line-height: 1.05;
+  }
+
+  p {
+    color: #5d5a54;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 18px auto 0;
+    max-width: 620px;
+  }
+
+  .not-found-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .primary-link,
+  .secondary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 22px;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+  }
+
+  .primary-link {
+    background: #244537;
+    color: #f8f4eb;
+  }
+
+  .secondary-link {
+    background: #efe3c7;
+    color: #244537;
+  }
+
+  .primary-link:hover,
+  .secondary-link:hover {
+    opacity: 0.92;
+  }
+</style>

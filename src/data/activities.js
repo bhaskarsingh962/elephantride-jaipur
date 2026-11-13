@@ -5,7 +5,7 @@ const activityDefinitions = [
   {
     id: 1,
     number: "01",
-    title: "Jaipur Elephant Meeting",
+    title: "Elephant Meeting & Introduction",
     slug: "elephant-meeting",
     image: "/images/activities/elephant-meeting.webp",
     description:
@@ -24,53 +24,7 @@ const activityDefinitions = [
   {
     id: 2,
     number: "02",
-    title: "Jaipur Elephant Ride",
-    slug: "elephant-ride",
-    image: "/images/activities/elephant-ride.webp",
-    description:
-      "Discover Jaipur's surrounding landscape through the elephant ride experience.",
-    introduction:
-      "Explore the landscape around Jaipur through the elephant ride experience featured on the Elefriendride website.",
-    details:
-      "The ride is one of the experiences described by Elefriendride. Contact the team to confirm availability and any visit details before making plans.",
-    supportingImages: [
-      {
-        src: "/images/gallery/gallery-06.webp",
-        alt: "Elephants and visitors outdoors at Elefriendride",
-      },
-      {
-        src: "/images/gallery/contributed/img-3004.webp",
-        alt: "Elephant walking along a path with visitors nearby",
-      },
-    ],
-  },
-  {
-    id: 3,
-    number: "03",
-    title: "Jaipur Elephant Walking",
-    slug: "walking-with-elephants",
-    image: "/images/new%20img/walking.jpeg",
-    description:
-      "Experience a walk alongside elephants and discover the beauty of your surroundings.",
-    introduction:
-      "Walk with elephants at Jaipur Elephant Ride and discover the Fun with Elephants activity.",
-    details:
-      "The idea of an elephant safari gets everyone excited. Our “Fun with Elephants” activity gives visitors an opportunity to get close to these animals, walk alongside them and interact with them. Learn more about this activity and other elephant experiences at Jaipur Elephant Ride.",
-    supportingImages: [
-      {
-        src: "/images/gallery/contributed/img-3722.webp",
-        alt: "Visitor walking alongside an elephant",
-      },
-      {
-        src: "/images/gallery/contributed/img-3723.webp",
-        alt: "Children walking near an elephant",
-      },
-    ],
-  },
-  {
-    id: 4,
-    number: "04",
-    title: "Jaipur Elephant Feeding",
+    title: "Feeding the Elephant",
     slug: "feeding-elephant",
     image: "/images/gallery/contributed/img-1968.webp",
     description:
@@ -91,9 +45,9 @@ const activityDefinitions = [
     ],
   },
   {
-    id: 5,
-    number: "05",
-    title: "Jaipur Elephant Painting",
+    id: 3,
+    number: "03",
+    title: "Paint On the Elephant",
     slug: "painting",
     image: "/images/new%20img/painting.jpeg",
     description:
@@ -114,9 +68,9 @@ const activityDefinitions = [
     ],
   },
   {
-    id: 6,
-    number: "06",
-    title: "Jaipur Elephant Bathing",
+    id: 4,
+    number: "04",
+    title: "Shower with Elephant",
     slug: "bathing",
     image: "/images/activities/elephant-bathing.webp",
     description:
@@ -133,6 +87,29 @@ const activityDefinitions = [
       {
         src: "/images/gallery/contributed/img-3304.webp",
         alt: "Visitors with an elephant outdoors",
+      },
+    ],
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Walking with the Elephants in Village",
+    slug: "walking-with-elephants",
+    image: "/images/new%20img/walking.jpeg",
+    description:
+      "Experience a walk alongside elephants and discover the beauty of your surroundings.",
+    introduction:
+      "Walk with elephants at Jaipur Elephant Ride and discover the Fun with Elephants activity.",
+    details:
+      "The idea of an elephant safari gets everyone excited. Our “Fun with Elephants” activity gives visitors an opportunity to get close to these animals, walk alongside them and interact with them. Learn more about this activity and other elephant experiences at Jaipur Elephant Ride.",
+    supportingImages: [
+      {
+        src: "/images/gallery/contributed/img-3722.webp",
+        alt: "Visitor walking alongside an elephant",
+      },
+      {
+        src: "/images/gallery/contributed/img-3723.webp",
+        alt: "Children walking near an elephant",
       },
     ],
   },

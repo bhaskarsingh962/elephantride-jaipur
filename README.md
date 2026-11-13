@@ -40,7 +40,7 @@ All commands are run from the root of the project, from a terminal:
 
 ## SEO deployment configuration
 
-The canonical production domain is `https://elephantridejaipur.com`. Astro uses
+The canonical production domain is `https://jaipurelephantride.com`. Astro uses
 the `SITE_URL` environment variable for canonical URLs, structured data, the
 sitemap, and `robots.txt`. The build defaults to the production domain; set
 `SITE_URL` explicitly in the deployment environment if a different origin is
