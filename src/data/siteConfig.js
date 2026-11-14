@@ -29,10 +29,7 @@ export const siteConfig = {
 
   whatsapp: "916376163080",
 
-  instagram: "https://www.instagram.com/elefriendride",
-
-  youtube:
-    "https://www.youtube.com/channel/UCCkPVa6fq-QrqeTelRc9fXw/featured",
+  youtube: "https://youtube.com/@jaipurelephantride?si=T6I3-Kdm2awzEnQ7",
 
   officeMapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
