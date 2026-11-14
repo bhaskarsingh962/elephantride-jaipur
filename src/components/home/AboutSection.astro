@@ -1,9 +1,11 @@
 
 ---
-import { getImageDimensions } from "../../data/imageDimensions.js";
+import { getResponsiveImage } from "../../data/responsiveImages.js";
 
-const imageSrc = "/images/about/about-elephant.webp";
-const imageDimensions = getImageDimensions(imageSrc);
+const image = getResponsiveImage(
+  "/images/about/about-elephant.webp",
+  "(min-width: 851px) 45vw, 88vw"
+);
 ---
 
 <section class="about-section" id="about">
@@ -11,10 +13,12 @@ const imageDimensions = getImageDimensions(imageSrc);
 
     <div class="about-image-wrapper">
       <img
-        src={imageSrc}
+        src={image.src}
+        srcset={image.srcSet}
+        sizes={image.sizes}
         alt="A visitor experiencing an elephant encounter in Jaipur"
-        width={imageDimensions.width}
-        height={imageDimensions.height}
+        width={image.width}
+        height={image.height}
         loading="lazy"
         decoding="async"
       />

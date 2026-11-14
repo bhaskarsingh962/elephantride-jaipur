@@ -1,6 +1,16 @@
 
 ---
 import { activities } from "../../data/activities.js";
+import { getResponsiveImage } from "../../data/responsiveImages.js";
+
+const activitiesWithResponsiveImages = activities.map((activity) => ({
+  ...activity,
+  responsiveImage: getResponsiveImage(
+    activity.image,
+    "(min-width: 900px) 27vw, (min-width: 601px) 43vw, 88vw",
+    activity.imageDimensions
+  ),
+}));
 ---
 
 <section class="activities-section">
@@ -23,12 +33,14 @@ import { activities } from "../../data/activities.js";
   </div>
 
   <div class="activities-grid">
-    {activities.map((activity) => (
+    {activitiesWithResponsiveImages.map((activity) => (
       <article class="activity-card">
 
         <a href={`/experiences/${activity.slug}`} class="activity-image">
           <img
-            src={activity.image}
+            src={activity.responsiveImage.src}
+            srcset={activity.responsiveImage.srcSet}
+            sizes={activity.responsiveImage.sizes}
             alt={`${activity.title} at Jaipur Elephant Ride`}
             height={activity.imageDimensions.height}
             width={activity.imageDimensions.width}

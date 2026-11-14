@@ -9,6 +9,7 @@ import {
   galleryCategories,
   galleryImages,
 } from "../../data/galleryImages.js";
+import { getResponsiveImage } from "../../data/responsiveImages.js";
 
 const previewImageSources = new Set([
   "/images/gallery/gallery-01.webp",
@@ -120,31 +121,43 @@ export default function Gallery({ preview = false }) {
       )}
 
       <div className="gallery-grid">
-        {visibleImages.map((item, index) => (
-          <button
-            type="button"
-            key={item.src}
-            className={`gallery-item gallery-item-${(index % 8) + 1}`}
-            onClick={(event) => {
-              triggerRef.current = event.currentTarget;
-              setActiveImage(index);
-            }}
-            aria-label={`View photograph ${index + 1}: ${item.alt}`}
-          >
-            <img
-              src={item.src}
-              alt={item.alt}
-              width={item.dimensions.width}
-              height={item.dimensions.height}
-              loading="lazy"
-              decoding="async"
-            />
-            <span className="gallery-item-overlay">
-              <span>{item.category}</span>
-              <Maximize2 size={20} aria-hidden="true" />
-            </span>
-          </button>
-        ))}
+        {visibleImages.map((item, index) => {
+          const image = preview
+            ? getResponsiveImage(
+                item.src,
+                "(min-width: 1000px) 22vw, (min-width: 651px) 29vw, 44vw",
+                item.dimensions
+              )
+            : { src: item.src };
+
+          return (
+            <button
+              type="button"
+              key={item.src}
+              className={`gallery-item gallery-item-${(index % 8) + 1}`}
+              onClick={(event) => {
+                triggerRef.current = event.currentTarget;
+                setActiveImage(index);
+              }}
+              aria-label={`View photograph ${index + 1}: ${item.alt}`}
+            >
+              <img
+                src={image.src}
+                srcSet={image.srcSet}
+                sizes={image.sizes}
+                alt={item.alt}
+                width={item.dimensions.width}
+                height={item.dimensions.height}
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="gallery-item-overlay">
+                <span>{item.category}</span>
+                <Maximize2 size={20} aria-hidden="true" />
+              </span>
+            </button>
+          );
+        })}
       </div>
 
       {activeImage !== null && visibleImages[activeImage] && (

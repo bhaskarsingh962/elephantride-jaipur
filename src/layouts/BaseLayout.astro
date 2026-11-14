@@ -13,6 +13,8 @@ const {
   socialImageAlt = "Jaipur Elephant Ride experiences in Rajasthan",
   type = "website",
   preloadImage,
+  preloadImageSrcSet,
+  preloadImageSizes,
   structuredData,
   robots = "index, follow, max-image-preview:large",
 } = Astro.props;
@@ -111,7 +113,14 @@ const businessStructuredData = {
 
     <!-- Google Fonts -->
     {preloadImage && (
-      <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href={preloadImage}
+        imagesrcset={preloadImageSrcSet}
+        imagesizes={preloadImageSizes}
+        fetchpriority="high"
+      />
     )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -121,9 +130,17 @@ const businessStructuredData = {
     />
 
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+      />
+    </noscript>
   </head>
 
   <body>

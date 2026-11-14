@@ -1,19 +1,24 @@
 
 ---
-import { getImageDimensions } from "../../data/imageDimensions.js";
+import { getResponsiveImage } from "../../data/responsiveImages.js";
 
-const imageSrc = "/images/sanctuary/sanctuary-elephants.webp";
-const imageDimensions = getImageDimensions(imageSrc);
+const image = getResponsiveImage(
+  "/images/sanctuary/sanctuary-elephants.webp",
+  "100vw"
+);
 ---
 
 <section class="sanctuary-section">
   <div class="sanctuary-image">
     <img
-      src={imageSrc}
+      src={image.src}
+      srcset={image.srcSet}
+      sizes={image.sizes}
       alt="Elephants at a sanctuary in Jaipur"
-      width={imageDimensions.width}
-      height={imageDimensions.height}
+      width={image.width}
+      height={image.height}
       loading="lazy"
+      decoding="async"
     />
     <div class="sanctuary-overlay"></div>
   </div>

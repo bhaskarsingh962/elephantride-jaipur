@@ -66,6 +66,21 @@ export default function Navbar({ currentPath }) {
   }, []);
 
   useEffect(() => {
+    const translatedLanguage = document.cookie
+      .split("; ")
+      .find((cookie) => cookie.startsWith("googtrans="))
+      ?.split("/")
+      .pop();
+
+    if (
+      translatedLanguage === "en" ||
+      !translationLanguages.some((language) => language.code === translatedLanguage)
+    ) {
+      return;
+    }
+
+    setSelectedLanguage(translatedLanguage);
+
     const initializeTranslator = () => {
       if (!window.google?.translate?.TranslateElement) return;
       new window.google.translate.TranslateElement(

@@ -1,21 +1,22 @@
 
 ---
-import { getImageDimensions } from "../../data/imageDimensions.js";
+import { homepageHeroImage } from "../../data/responsiveImages.js";
 
-const heroImage = "/images/activities/elephant-ride.webp";
-const heroDimensions = getImageDimensions(heroImage);
+const heroImage = homepageHeroImage;
 ---
 
 <section class="hero-section">
   <img
     class="hero-image"
-    src={heroImage}
+    src={heroImage.src}
+    srcset={heroImage.srcSet}
+    sizes={heroImage.sizes}
     alt="Visitors taking part in an elephant ride in Jaipur, Rajasthan"
     fetchpriority="high"
     loading="eager"
     decoding="async"
-    width={heroDimensions.width}
-    height={heroDimensions.height}
+    width={heroImage.width}
+    height={heroImage.height}
   />
 
   <div class="hero-overlay"></div>

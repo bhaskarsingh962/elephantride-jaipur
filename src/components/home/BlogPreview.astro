@@ -1,7 +1,16 @@
 
 ---
 import { featuredBlogArticles } from "../../data/blogArticles.js";
+import { getResponsiveImage } from "../../data/responsiveImages.js";
 
+const featuredArticles = featuredBlogArticles.slice(0, 3).map((article) => ({
+  ...article,
+  responsiveImage: getResponsiveImage(
+    article.image,
+    "(min-width: 1000px) 27vw, (min-width: 651px) 43vw, 88vw",
+    article.imageDimensions
+  ),
+}));
 ---
 
 <section class="blog-preview">
@@ -34,12 +43,14 @@ import { featuredBlogArticles } from "../../data/blogArticles.js";
     </div>
 
     <div class="blog-grid">
-      {featuredBlogArticles.slice(0, 3).map((article) => (
+      {featuredArticles.map((article) => (
         <article class="blog-card">
 
           <a href={`/blog/${article.slug}`} class="blog-image">
             <img
-              src={article.image}
+              src={article.responsiveImage.src}
+              srcset={article.responsiveImage.srcSet}
+              sizes={article.responsiveImage.sizes}
               alt={article.title}
               width={article.imageDimensions.width}
               height={article.imageDimensions.height}
